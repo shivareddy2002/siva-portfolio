@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Download } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Aspiring Data Analyst | Python | SQL | Power BI";
+  const fullText = "Aspiring Data Scientist | Machine Learning | Deep Learning | NLP";
   
   useEffect(() => {
     let index = 0;
@@ -39,7 +40,7 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
           {/* Avatar */}
           <Avatar className="w-32 h-32 md:w-40 md:h-40 border-4 border-primary/20 shadow-lg animate-pulse-slow">
-            <AvatarImage src="/placeholder.svg" alt="Lomada Siva Gangi Reddy" />
+            <AvatarImage src={profileImage} alt="Lomada Siva Gangi Reddy" />
             <AvatarFallback className="text-4xl font-heading bg-gradient-to-br from-primary to-secondary text-white">
               LSGR
             </AvatarFallback>

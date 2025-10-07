@@ -45,11 +45,11 @@ const About = () => {
                   Professional Summary
                 </h3>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Aspiring Data Analyst seeking to leverage strong analytical skills, 
-                  machine learning knowledge, and hands-on project experience to deliver 
-                  data-driven insights and contribute to business growth. Passionate about 
-                  transforming raw data into actionable intelligence through advanced 
-                  analytics and visualization techniques.
+                  Aspiring Data Scientist seeking to leverage strong analytical skills, 
+                  machine learning, deep learning, and NLP expertise with hands-on project 
+                  experience to deliver data-driven insights and contribute to business growth 
+                  through advanced AI solutions. Passionate about transforming raw data into 
+                  actionable intelligence through cutting-edge machine learning techniques.
                 </p>
               </CardContent>
             </Card>
