@@ -66,3 +66,16 @@ It serves as a **digital resume** and a central hub for all my work, including p
 - 🏆 **Naukri Campus Young Turks** – 93.91% Percentile  
 
 ---
+
+## 👨‍💻 Author  
+
+**Lomada Siva Gangi Reddy**  
+- 🎓 B.Tech CSE (Data Science), RGMCET (2021–2025)  
+- 💡 Interests: Python | Machine Learning | Deep Learning | Data Science  
+- 📍 Open to **Internships & Job Offers**  
+
+📬 **Contact Me**:  
+- 📞 9346493592  
+- [💼 LinkedIn](https://www.linkedin.com/in/lomada-siva-gangi-reddy-a64197280/) [🌐 GitHub](https://github.com/shivareddy2002)  
+
+---
