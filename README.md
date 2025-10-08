@@ -1,4 +1,4 @@
-# 💼 Lomada Siva Gangi Reddy — Portfolio Website  
+# Lomada Siva Gangi Reddy — Portfolio Website  
 
 Welcome to my personal portfolio!  
 This website highlights my journey as an **Aspiring Data Scientist**, showcasing my **skills, projects, and certifications** in the fields of **Python, SQL, Machine Learning, Deep Learning, NLP, Power BI, and Data Visualization**.
@@ -24,20 +24,6 @@ It serves as a **digital resume** and a central hub for all my work, including p
 
 ---
 
-## 🛠️ Tech Stack  
-
-| Category | Technologies |
-|-----------|--------------|
-| **Frontend** | HTML, CSS, JavaScript |
-| **Backend** | Flask (Python) |
-| **Deployment** | Lovable AI, Vercel |
-| **Version Control** | Git & GitHub |
-
----
-
-
----
-
 ## 🧠 My Skills  
 
 **Programming:** Python, Java, SQL  
@@ -53,8 +39,7 @@ It serves as a **digital resume** and a central hub for all my work, including p
 |----------|--------------|--------|
 | [Text Emotion Classification](#) | A deep learning model to classify emotions in text using Keras. | Python, Keras, NLP |
 | [Number Guessing Game](#) | A fun interactive Python game for logical skill development. | Python |
-
-> 💡 More projects are available on my [GitHub Profile](https://github.com/L-SivaRamiReddy).
+-For more projcts:[🌐 GitHub](https://github.com/shivareddy2002) 
 
 ---
 
