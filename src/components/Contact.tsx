@@ -174,7 +174,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    rows={5}
+                    rows={3}
                     className="border-2 resize-none"
                   />
                 </div>

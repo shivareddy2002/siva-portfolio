@@ -45,11 +45,7 @@ const About = () => {
                   Professional Summary
                 </h3>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Aspiring Data Scientist seeking to leverage strong analytical skills, 
-                  machine learning, deep learning, and NLP expertise with hands-on project 
-                  experience to deliver data-driven insights and contribute to business growth 
-                  through advanced AI solutions. Passionate about transforming raw data into 
-                  actionable intelligence through cutting-edge machine learning techniques.
+                  Aspiring Data Scientist with hands-on experience in Machine Learning, Deep Learning, and NLP, passionate about transforming raw data into actionable insights. Skilled in Python, TensorFlow, Streamlit, and advanced data visualization tools like Power BI and Excel. Experienced in building and deploying real-world AI applications, analyzing complex datasets, and generating strategic recommendations. Dedicated to continuous learning, exploring innovative approaches in AI and data science, and solving challenging problems through data-driven solutions. Committed to contributing to impactful projects that drive decision-making, optimize processes, and support business growth. Eager to apply analytical and AI expertise in real-world business and research challenges.
                 </p>
               </CardContent>
             </Card>

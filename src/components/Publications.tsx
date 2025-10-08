@@ -62,12 +62,10 @@ const Publications = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <h4 className="font-semibold text-lg md:text-xl leading-relaxed">
-                Enhanced CNN-Based Classification and Forecasting of Water Stress in Tomato Plant
+                Classification and Forecasting of Water Stress in Tomato Plant
               </h4>
               <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                A comprehensive research study utilizing advanced convolutional neural networks 
-                combined with LSTM architectures to predict and classify water stress levels in 
-                tomato plants using IoT sensor data, contributing to precision agriculture solutions.
+                This project focuses on predicting and classifying water stress levels in tomato plants using IoT sensor data through a hybrid CNN-LSTM architecture. The model combines convolutional and sequential learning to extract both spatial and temporal features for high prediction accuracy. IoT sensors collect parameters like soil moisture, temperature, and humidity, which are processed for model training. The CNN component captures spatial correlations, while the LSTM layer identifies time-based dependencies. The hybrid model effectively predicts early signs of water stress, enabling data-driven irrigation management. Model evaluation using accuracy, F1-score, and RMSE confirmed its reliability. By integrating AI with IoT, the project supports precision agriculture and demonstrates how deep learning can improve sustainable farming practices.
               </p>
               <Button
                 variant="outline"

@@ -6,7 +6,7 @@ import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
-  const fullText = "Aspiring Data Scientist | Machine Learning | Deep Learning | NLP";
+  const fullText = "Aspiring Data Scientist | Python, SQL, ML, DL, NLP | Power BI, Data Visualization";
   
   useEffect(() => {
     let index = 0;

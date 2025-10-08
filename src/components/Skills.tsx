@@ -7,13 +7,13 @@ const Skills = () => {
     {
       title: "Programming Languages",
       icon: <Code2 className="h-6 w-6" />,
-      skills: ["Python", "SQL", "Java", "C", "HTML", "CSS", "JavaScript"],
+      skills: ["Python", "SQL", "Java", "C", "HTML", "CSS"],
       color: "from-blue-500 to-cyan-500",
     },
     {
       title: "Data Science & ML",
       icon: <Brain className="h-6 w-6" />,
-      skills: ["Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", "Scikit-learn", "NLP"],
+      skills: ["Machine Learning", "Deep Learning", "TensorFlow", "Scikit-learn", "NLP"],
       color: "from-purple-500 to-pink-500",
     },
     {
@@ -25,8 +25,14 @@ const Skills = () => {
     {
       title: "Databases & Tools",
       icon: <Database className="h-6 w-6" />,
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Git", "Jupyter", "VS Code"],
+      skills: ["MySQL", "Git", "GitHub", "Jupyter", "VS Code"],
       color: "from-orange-500 to-red-500",
+    },
+    {
+      title: "Other Technical Skills",
+      icon: <Code2 className="h-6 w-6" />,
+      skills: ["Data Preprocessing", "Feature Engineering", "Model Evaluation", "Data Visualization Dashboards"],
+      color: "from-cyan-500 to-blue-500",
     },
     {
       title: "Soft Skills",
