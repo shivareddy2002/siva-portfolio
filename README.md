@@ -35,13 +35,53 @@ It serves as a **digital resume** and a central hub for all my work, including p
 
 ## 🏗️ Featured Projects  
 
-| Project | Description | Tools |
-|----------|--------------|--------|
-| [Text Emotion Classification](#) | A deep learning model to classify emotions in text using Keras. | Python, Keras, NLP |
-| [Number Guessing Game](#) | A fun interactive Python game for logical skill development. | Python |
--For more projcts:[🌐 GitHub](https://github.com/shivareddy2002) 
+
+<p align="center">
+
+<table>
+  <tr>
+    <th>🚀 Project</th>
+    <th>📝 Description</th>
+    <th>🛠 Tech Stack</th>
+    <th>🔗 Links</th>
+  </tr>
+  <tr>
+    <td>🌱 <a href="https://github.com/shivareddy2002/classification-and-forecasting-of-water-stress-in-tomato-plant">Water Stress Prediction</a></td>
+    <td>Predicted water stress using CNN+LSTM+ML on IoT data</td>
+    <td>Python, TensorFlow, Sklearn</td>
+    <td><a href="https://classification-and-forecasting-of-water-stress-in-tomato-plant.streamlit.app/">Demo</a></td>
+  </tr>
+  <tr>
+    <td>🌾 <a href="https://github.com/shivareddy2002/Rice-Grain-Classifier">Rice Type Classifier</a></td>
+    <td>Classified rice varieties with CNN and Streamlit app</td>
+    <td>Python, Keras, Streamlit</td>
+    <td><a href="https://rice-grain-classifier-project.streamlit.app/">Demo</a></td>
+  </tr>
+  <tr>
+    <td>📝 <a href="https://github.com/shivareddy2002/GRU-Text-Generation">Text Generation</a></td>
+    <td>GRU-based RNN for sequence generation with beam search</td>
+    <td>Python, TensorFlow, Streamlit</td>
+    <td><a href="https://text-generation-using-gru-model.streamlit.app/">Demo</a></td>
+  </tr>
+  <tr>
+    <td>🤖 <a href="https://github.com/shivareddy2002/Word-Search-Chatbot-Using-Wikipedia-">Word Search Chatbot</a></td>
+    <td>Interactive chatbot using Wikipedia API</td>
+    <td>HTML, CSS, JS, API</td>
+    <td><a href="https://shivareddy2002.github.io/Word-Search-Chatbot-Using-Wikipedia-/">Demo</a></td>
+  </tr>
+  <tr>
+    <td>📊 <a href="https://github.com/shivareddy2002/Zomato-Data-Analysis-Using-Python">Zomato Data Analysis</a></td>
+    <td>Data analysis & visualizations for restaurant insights</td>
+    <td>Python, Pandas, Seaborn</td>
+    <td><a href="https://zomato-data-analysis-dashboard.streamlit.app/">Demo</a></td>
+  </tr>
+</table>
+
+</p>
+
 
 ---
+
 
 ## 🏅 Certifications  
 
