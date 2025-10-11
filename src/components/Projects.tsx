@@ -20,13 +20,6 @@ const Projects = () => {
       demo: "https://rice-grain-classifier-project.streamlit.app/",
     },
     {
-      title: "Text Generation Model",
-      description: "GRU-based RNN implementation with Streamlit interface for generating contextual text sequences using advanced natural language processing.",
-      tech: ["Python", "GRU", "RNN", "NLP", "Streamlit"],
-      github: "https://github.com/shivareddy2002/GRU-Text-Generation",
-      demo: "https://text-generation-using-gru-model.streamlit.app/",
-    },
-    {
       title: "Word Search Chatbot",
       description: "Intelligent chatbot leveraging Wikipedia API to provide instant, accurate information retrieval and conversational responses.",
       tech: ["Python", "API Integration", "NLP", "Chatbot"],

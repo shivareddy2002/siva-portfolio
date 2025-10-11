@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Internships from "@/components/Internships";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Publications from "@/components/Publications";
@@ -35,6 +36,7 @@ const Index = () => {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
+      <Internships />
       <Projects />
       <Skills />
       <Publications />
