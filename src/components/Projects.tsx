@@ -27,11 +27,11 @@ const Projects = () => {
       demo: "https://shivareddy2002.github.io/Word-Search-Chatbot-Using-Wikipedia-/",
     },
     {
-      title: "Zomato Data Analysis",
-      description: "Comprehensive exploratory data analysis of Zomato restaurant data with interactive visualizations revealing customer behavior and market trends.",
-      tech: ["Python", "Pandas", "Seaborn", "Matplotlib", "Data Analysis"],
-      github: "https://github.com/shivareddy2002/Zomato-Data-Analysis-Using-Python",
-      demo: "#",
+      title: "Zomato Data Analysis Dashboard & Recommendation System",
+      description: "Analyzed restaurant dataset to identify patterns in ratings, food types, and pricing. Built visualizations for customer preferences and restaurant performance evaluation.",
+      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Streamlit"],
+      github: "https://github.com/shivareddy2002/Zomato-Data-Analysis-Dashboard",
+      demo: "https://zomato-data-analysis-dashboard.streamlit.app/",
     },
   ];
 
