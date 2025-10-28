@@ -6,6 +6,17 @@ import { Badge } from "@/components/ui/badge";
 const Publications = () => {
   const certifications = [
     {
+      title: "AI Generalist Credential Certificate",
+      issuer: "Digital Maven",
+      category: "AI",
+      link: "https://cdn.certifier.io/3ac07c01-49db-4133-8a1f-2be972b1d5e7/credentials/01k8jtwww21n0bjbrhzcftcq45/designs/01k8jtrmcq2bhzctws0b0reswe/jZAQe4_axG.png",
+    },
+    {
+      title: "Data Science Course",
+      issuer: "CEDLEARN",
+      category: "Data Science",
+    },
+    {
       title: "Data Science Guided Path",
       issuer: "Coding Ninjas",
       category: "Data Science",
@@ -96,7 +107,7 @@ const Publications = () => {
                     Professional Certifications
                   </CardTitle>
                   <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                    5 Certifications
+                    7 Certifications
                   </Badge>
                 </div>
               </div>
@@ -110,9 +121,22 @@ const Publications = () => {
                   >
                     <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary mt-2 flex-shrink-0 group-hover:scale-150 transition-transform" />
                     <div className="flex-1 min-w-0">
-                      <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">
-                        {cert.title}
-                      </h5>
+                      {cert.link ? (
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">
+                            {cert.title}
+                          </h5>
+                        </a>
+                      ) : (
+                        <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">
+                          {cert.title}
+                        </h5>
+                      )}
                       <p className="text-xs md:text-sm text-muted-foreground">
                         {cert.issuer}
                       </p>
