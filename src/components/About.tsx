@@ -1,4 +1,4 @@
-import { GraduationCap, Award, TrendingUp } from "lucide-react";
+import { GraduationCap, Award, TrendingUp, Globe, Heart, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
@@ -90,6 +90,74 @@ const About = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Personal Info Section */}
+        <div className="grid md:grid-cols-3 gap-6 mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          {/* Languages */}
+          <Card className="border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <Globe className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="text-lg font-heading font-semibold text-foreground">
+                  Languages
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["English", "Hindi", "Telugu"].map((lang) => (
+                  <span
+                    key={lang}
+                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Interests */}
+          <Card className="border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <Heart className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="text-lg font-heading font-semibold text-foreground">
+                  Interests
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["Playing Chess", "Watching Cricket"].map((interest) => (
+                  <span
+                    key={interest}
+                    className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium"
+                  >
+                    {interest}
+                  </span>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Location */}
+          <Card className="border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <MapPin className="h-5 w-5 text-white" />
+                </div>
+                <h3 className="text-lg font-heading font-semibold text-foreground">
+                  Location
+                </h3>
+              </div>
+              <p className="text-muted-foreground font-medium">
+                Kadapa, Andhra Pradesh
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
