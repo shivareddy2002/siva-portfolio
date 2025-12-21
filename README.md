@@ -1,4 +1,16 @@
-# Lomada Siva Gangi Reddy — Portfolio Website  
+<p align="center">
+  <img 
+    src="https://capsule-render.vercel.app/api?type=waving
+    &color=0:ff4b4b,100:f9c74f
+    &height=180
+    &section=header
+    &text=Lomada%20Siva%20Gangi%20Reddy%20—%20Portfolio%20Website
+    &fontSize=36
+    &fontColor=ffffff
+    &animation=fadeIn
+    &fontAlignY=35"
+  />
+</p>
 
 Welcome to my personal portfolio!  
 This website highlights my journey as an **Aspiring Data Scientist**, showcasing my **skills, projects, and certifications** in the fields of **Python, SQL, Machine Learning, Deep Learning, NLP, Power BI, and Data Visualization**.
