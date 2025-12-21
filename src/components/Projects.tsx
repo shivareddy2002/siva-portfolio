@@ -33,6 +33,13 @@ const Projects = () => {
       github: "https://github.com/shivareddy2002/Zomato-Data-Analysis-Dashboard",
       demo: "https://zomato-data-analysis-dashboard.streamlit.app/",
     },
+    {
+      title: "AutoPredict Pro - Car Price Prediction",
+      description: "End-to-end ML & DL web app predicting used car market value using mileage, year, fuel type, engine power, ownership history, and brand value with dual-model approach.",
+      tech: ["Python", "Scikit-learn", "TensorFlow", "Keras", "Pandas", "NumPy", "Streamlit"],
+      github: "https://github.com/shivareddy2002/AutoPredictPro",
+      demo: "https://autopredictpro.streamlit.app/",
+    },
   ];
 
   return (
