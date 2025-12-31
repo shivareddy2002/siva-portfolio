@@ -12,6 +12,12 @@ const Publications = () => {
       link: "https://cdn.certifier.io/3ac07c01-49db-4133-8a1f-2be972b1d5e7/credentials/01k8jtwww21n0bjbrhzcftcq45/designs/01k8jtrmcq2bhzctws0b0reswe/jZAQe4_axG.png",
     },
     {
+      title: "SQL – Skill Up Certification",
+      issuer: "GeeksforGeeks",
+      category: "Database",
+      link: "https://www.geeksforgeeks.org/certificate/aa396296b3dc072748325f60e4f16839",
+    },
+    {
       title: "Data Science Course",
       issuer: "CEDLEARN",
       category: "Data Science",
@@ -107,7 +113,7 @@ const Publications = () => {
                     Professional Certifications
                   </CardTitle>
                   <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                    7 Certifications
+                    8 Certifications
                   </Badge>
                 </div>
               </div>
