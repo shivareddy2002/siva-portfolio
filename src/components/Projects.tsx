@@ -40,6 +40,13 @@ const Projects = () => {
       github: "https://github.com/shivareddy2002/AutoPredictPro",
       demo: "https://autopredictpro.streamlit.app/",
     },
+    {
+      title: "Credit Card Transaction Dashboard",
+      description: "Interactive Power BI dashboard for credit card analytics with SQL database, DAX measures for KPIs, and time intelligence providing weekly, quarterly, and YTD insights.",
+      tech: ["Power BI", "SQL", "DAX", "Data Modeling", "Data Visualization"],
+      github: "https://github.com/shivareddy2002/Credit_Card_Transaction_Report",
+      demo: "https://drive.google.com/drive/folders/16T65EOoXPGIZTcLpNTc-AbGHeKpTW9zG?usp=sharing",
+    },
   ];
 
   return (
