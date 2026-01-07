@@ -65,50 +65,9 @@ const Publications = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-          {/* Publication */}
+        <div className="grid gap-8 md:gap-12">
+          {/* Certifications - First */}
           <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-in">
-            <CardHeader>
-              <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white flex-shrink-0">
-                  <BookOpen className="h-7 w-7" />
-                </div>
-                <div className="flex-1">
-                  <CardTitle className="text-xl md:text-2xl font-heading mb-2">
-                    Research Publication
-                  </CardTitle>
-                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
-                    Published Research
-                  </Badge>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <h4 className="font-semibold text-lg md:text-xl leading-relaxed">
-                Classification and Forecasting of Water Stress in Tomato Plant
-              </h4>
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                This project focuses on predicting and classifying water stress levels in tomato plants using IoT sensor data through a hybrid CNN-LSTM architecture. The model combines convolutional and sequential learning to extract both spatial and temporal features for high prediction accuracy. IoT sensors collect parameters like soil moisture, temperature, and humidity, which are processed for model training. The CNN component captures spatial correlations, while the LSTM layer identifies time-based dependencies. The hybrid model effectively predicts early signs of water stress, enabling data-driven irrigation management. Model evaluation using accuracy, F1-score, and RMSE confirmed its reliability. By integrating AI with IoT, the project supports precision agriculture and demonstrates how deep learning can improve sustainable farming practices.
-              </p>
-              <Button
-                variant="outline"
-                className="w-full sm:w-auto hover:bg-primary hover:text-primary-foreground"
-                asChild
-              >
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  View Publication (DOI)
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-
-          {/* Certifications */}
-          <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-in" style={{ animationDelay: "0.2s" }}>
             <CardHeader>
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-white flex-shrink-0">
@@ -125,7 +84,7 @@ const Publications = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
+              <div className="grid sm:grid-cols-2 gap-3">
                 {certifications.map((cert, index) => (
                   <div
                     key={index}
@@ -162,6 +121,47 @@ const Publications = () => {
                   </div>
                 ))}
               </div>
+            </CardContent>
+          </Card>
+
+          {/* Publication - Second */}
+          <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-in" style={{ animationDelay: "0.2s" }}>
+            <CardHeader>
+              <div className="flex items-start gap-4">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white flex-shrink-0">
+                  <BookOpen className="h-7 w-7" />
+                </div>
+                <div className="flex-1">
+                  <CardTitle className="text-xl md:text-2xl font-heading mb-2">
+                    Research Publication
+                  </CardTitle>
+                  <Badge className="bg-primary/10 text-primary hover:bg-primary/20">
+                    Published Research
+                  </Badge>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <h4 className="font-semibold text-lg md:text-xl leading-relaxed">
+                Classification and Forecasting of Water Stress in Tomato Plant
+              </h4>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                This project focuses on predicting and classifying water stress levels in tomato plants using IoT sensor data through a hybrid CNN-LSTM architecture. The model combines convolutional and sequential learning to extract both spatial and temporal features for high prediction accuracy. IoT sensors collect parameters like soil moisture, temperature, and humidity, which are processed for model training. The CNN component captures spatial correlations, while the LSTM layer identifies time-based dependencies. The hybrid model effectively predicts early signs of water stress, enabling data-driven irrigation management. Model evaluation using accuracy, F1-score, and RMSE confirmed its reliability. By integrating AI with IoT, the project supports precision agriculture and demonstrates how deep learning can improve sustainable farming practices.
+              </p>
+              <Button
+                variant="outline"
+                className="w-full sm:w-auto hover:bg-primary hover:text-primary-foreground"
+                asChild
+              >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View Publication (DOI)
+                </a>
+              </Button>
             </CardContent>
           </Card>
         </div>
