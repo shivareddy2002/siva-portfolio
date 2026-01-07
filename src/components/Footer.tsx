@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,6 +43,13 @@ const Footer = () => {
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
+            </a>
+            <a
+              href="tel:+919346493592"
+              className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
+              aria-label="Phone"
+            >
+              <Phone className="h-5 w-5" />
             </a>
           </div>
 
