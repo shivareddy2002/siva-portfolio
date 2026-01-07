@@ -89,41 +89,6 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Skill Progression Visual */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="border-2">
-            <CardContent className="p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-heading font-semibold mb-6 text-center">
-                Core Competencies
-              </h3>
-              <div className="space-y-6">
-                {[
-                  { name: "Python & Data Analysis", level: 90 },
-                  { name: "Machine Learning", level: 85 },
-                  { name: "SQL & Database Management", level: 80 },
-                  { name: "Data Visualization", level: 85 },
-                  { name: "Deep Learning", level: 75 },
-                ].map((skill, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-sm md:text-base">{skill.name}</span>
-                      <span className="text-sm font-semibold text-primary">{skill.level}%</span>
-                    </div>
-                    <div className="w-full h-3 bg-muted rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: `${skill.level}%`,
-                          animation: `slide-in 1s ease-out ${index * 0.1}s both`,
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );
