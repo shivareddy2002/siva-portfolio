@@ -18,6 +18,12 @@ const Publications = () => {
       link: "https://www.geeksforgeeks.org/certificate/aa396296b3dc072748325f60e4f16839",
     },
     {
+      title: "Data Analyst 101",
+      issuer: "Simplilearn (Microsoft)",
+      category: "Data Analytics",
+      link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjA0IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTY4ODU0OF85OTU4MTE3XzE3Njc3Nzk5MjYyOTQucG5nIiwidXNlcm5hbWUiOiJMT01BREEgU0lWQSBHQU5HSSBSRUREWSJ9",
+    },
+    {
       title: "Data Science Course",
       issuer: "CEDLEARN",
       category: "Data Science",
@@ -113,7 +119,7 @@ const Publications = () => {
                     Professional Certifications
                   </CardTitle>
                   <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                    8 Certifications
+                    9 Certifications
                   </Badge>
                 </div>
               </div>
