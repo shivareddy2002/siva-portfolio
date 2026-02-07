@@ -73,11 +73,11 @@ export default {
           to: { height: "0" },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" }
         },
         "slide-in": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
+          "0%": { opacity: "0", transform: "translateX(-16px)" },
           "100%": { opacity: "1", transform: "translateX(0)" }
         },
         "typing": {
@@ -85,7 +85,8 @@ export default {
           "100%": { width: "100%" }
         },
         "blink": {
-          "50%": { borderColor: "transparent" }
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" }
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
@@ -93,18 +94,23 @@ export default {
         },
         "pulse-slow": {
           "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.8" }
+          "50%": { opacity: "0.85" }
+        },
+        "progress-fill": {
+          "0%": { width: "0%" },
+          "100%": { width: "var(--target-width)" }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.6s ease-out",
-        "slide-in": "slide-in 0.5s ease-out",
+        "fade-in": "fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
+        "slide-in": "slide-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
         "typing": "typing 3.5s steps(40, end)",
-        "blink": "blink 0.7s infinite",
-        "float": "float 3s ease-in-out infinite",
-        "pulse-slow": "pulse-slow 2s ease-in-out infinite"
+        "blink": "blink 1s infinite",
+        "float": "float 4s ease-in-out infinite",
+        "pulse-slow": "pulse-slow 3s ease-in-out infinite",
+        "progress-fill": "progress-fill 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -2,13 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -23,7 +19,7 @@ All colors MUST be HSL.
     --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 214 32% 91%;
+    --muted: 214 32% 93%;
     --muted-foreground: 215 16% 47%;
 
     --accent: 160 84% 39%;
@@ -38,23 +34,22 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Custom tokens for portfolio */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(160 84% 39%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.1) 0%, hsl(160 84% 39% / 0.1) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.06) 0%, hsl(160 84% 39% / 0.06) 100%);
     --shadow-soft: 0 2px 8px hsl(217 91% 60% / 0.08);
-    --shadow-hover: 0 8px 24px hsl(217 91% 60% / 0.15);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-hover: 0 8px 24px hsl(217 91% 60% / 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 222 47% 8%;
+    --foreground: 210 40% 96%;
 
-    --card: 217 33% 17%;
-    --card-foreground: 210 40% 98%;
+    --card: 222 40% 12%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 217 33% 17%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 222 40% 12%;
+    --popover-foreground: 210 40% 96%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
@@ -62,8 +57,8 @@ All colors MUST be HSL.
     --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 222 40% 16%;
+    --muted-foreground: 215 20% 60%;
 
     --accent: 160 84% 39%;
     --accent-foreground: 0 0% 100%;
@@ -71,15 +66,14 @@ All colors MUST be HSL.
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 24%;
-    --input: 217 33% 24%;
+    --border: 222 33% 20%;
+    --input: 222 33% 20%;
     --ring: 217 91% 60%;
 
-    /* Dark mode custom tokens */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(160 84% 39%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.15) 0%, hsl(160 84% 39% / 0.15) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60% / 0.08) 0%, hsl(160 84% 39% / 0.08) 100%);
     --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
-    --shadow-hover: 0 8px 24px hsl(0 0% 0% / 0.5);
+    --shadow-hover: 0 8px 24px hsl(0 0% 0% / 0.4);
   }
 }
 
@@ -93,13 +87,22 @@ All colors MUST be HSL.
     font-family: 'Inter', sans-serif;
   }
 
+  /* Smooth theme transition */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, html * {
+    transition: background-color 0.4s ease, border-color 0.4s ease, color 0.15s ease;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     @apply font-bold;
   }
 
-  html {
-    scroll-behavior: smooth;
+  p, li {
+    @apply leading-relaxed;
   }
 }
 
@@ -127,5 +130,14 @@ All colors MUST be HSL.
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+  }
+
+  /* Premium card hover */
+  .card-hover {
+    @apply transition-all duration-400;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
   }
 }

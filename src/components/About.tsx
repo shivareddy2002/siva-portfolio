@@ -1,5 +1,6 @@
 import { GraduationCap, Award, TrendingUp, Globe, Heart, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const About = () => {
   const education = [
@@ -14,7 +15,7 @@ const About = () => {
       degree: "Intermediate",
       institution: "Junior College",
       period: "2019 - 2021",
-      score: "93%",
+      score: "Percentage: 93%",
       icon: <Award className="h-6 w-6" />,
     },
     {
@@ -27,137 +28,121 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="about" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 animate-fade-in">
+        <ScrollReveal className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8" />
-        </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Bio */}
-          <div className="space-y-6 animate-slide-in">
-            <Card className="border-2 hover:shadow-lg transition-shadow">
+          <ScrollReveal direction="left">
+            <Card className="border hover:shadow-lg transition-all duration-400">
               <CardContent className="p-6 md:p-8">
                 <h3 className="text-xl md:text-2xl font-heading font-semibold mb-4 text-primary">
                   Professional Summary
                 </h3>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base md:text-lg text-muted-foreground leading-[1.8]">
                   Aspiring Data Scientist with hands-on experience in Machine Learning, Deep Learning, and NLP, passionate about transforming raw data into actionable insights. Skilled in Python, TensorFlow, Streamlit, and advanced data visualization tools like Power BI and Excel. Experienced in building and deploying real-world AI applications, analyzing complex datasets, and generating strategic recommendations. Dedicated to continuous learning, exploring innovative approaches in AI and data science, and solving challenging problems through data-driven solutions. Committed to contributing to impactful projects that drive decision-making, optimize processes, and support business growth. Eager to apply analytical and AI expertise in real-world business and research challenges.
                 </p>
               </CardContent>
             </Card>
-          </div>
+          </ScrollReveal>
 
           {/* Education Timeline */}
-          <div className="space-y-4 animate-slide-in" style={{ animationDelay: "0.2s" }}>
+          <ScrollReveal direction="right" delay={0.15}>
             <h3 className="text-xl md:text-2xl font-heading font-semibold mb-6 flex items-center gap-2">
               <GraduationCap className="h-6 w-6 text-primary" />
               Education Timeline
             </h3>
             <div className="space-y-4">
               {education.map((edu, index) => (
-                <Card
-                  key={index}
-                  className="border-l-4 border-l-primary hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                >
-                  <CardContent className="p-4 md:p-6">
-                    <div className="flex gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
-                        {edu.icon}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-base md:text-lg text-foreground mb-1">
-                          {edu.degree}
-                        </h4>
-                        <p className="text-sm md:text-base text-muted-foreground">
-                          {edu.institution}
-                        </p>
-                        <div className="flex flex-wrap items-center gap-2 mt-2 text-xs md:text-sm">
-                          <span className="px-2 py-1 bg-primary/10 text-primary rounded-full font-medium">
-                            {edu.period}
-                          </span>
-                          <span className="px-2 py-1 bg-secondary/10 text-secondary rounded-full font-medium">
-                            {edu.score}
-                          </span>
+                <ScrollReveal key={index} delay={0.1 + index * 0.12}>
+                  <Card className="border-l-4 border-l-primary hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <CardContent className="p-4 md:p-6">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
+                          {edu.icon}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-base md:text-lg text-foreground mb-1">
+                            {edu.degree}
+                          </h4>
+                          <p className="text-sm md:text-base text-muted-foreground">
+                            {edu.institution}
+                          </p>
+                          <div className="flex flex-wrap items-center gap-2 mt-2 text-xs md:text-sm">
+                            <span className="px-2 py-1 bg-primary/10 text-primary rounded-full font-medium">
+                              {edu.period}
+                            </span>
+                            <span className="px-2 py-1 bg-secondary/10 text-secondary rounded-full font-semibold">
+                              {edu.score}
+                            </span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </ScrollReveal>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Personal Info Section */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          {/* Languages */}
-          <Card className="border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Globe className="h-5 w-5 text-white" />
+        <div className="grid md:grid-cols-3 gap-6 mt-14">
+          {[
+            {
+              icon: <Globe className="h-5 w-5 text-white" />,
+              title: "Languages",
+              content: (
+                <div className="flex flex-wrap gap-2">
+                  {["English", "Hindi", "Telugu"].map((lang) => (
+                    <span key={lang} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                      {lang}
+                    </span>
+                  ))}
                 </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground">
-                  Languages
-                </h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["English", "Hindi", "Telugu"].map((lang) => (
-                  <span
-                    key={lang}
-                    className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
-                  >
-                    {lang}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Interests */}
-          <Card className="border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Heart className="h-5 w-5 text-white" />
+              ),
+            },
+            {
+              icon: <Heart className="h-5 w-5 text-white" />,
+              title: "Interests",
+              content: (
+                <div className="flex flex-wrap gap-2">
+                  {["Playing Chess", "Watching Cricket"].map((interest) => (
+                    <span key={interest} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                      {interest}
+                    </span>
+                  ))}
                 </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground">
-                  Interests
-                </h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["Playing Chess", "Watching Cricket"].map((interest) => (
-                  <span
-                    key={interest}
-                    className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm font-medium"
-                  >
-                    {interest}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Location */}
-          <Card className="border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <MapPin className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground">
-                  Location
-                </h3>
-              </div>
-              <p className="text-muted-foreground font-medium">
-                Andhra Pradesh, India
-              </p>
-            </CardContent>
-          </Card>
+              ),
+            },
+            {
+              icon: <MapPin className="h-5 w-5 text-white" />,
+              title: "Location",
+              content: <p className="text-muted-foreground font-medium">Andhra Pradesh, India</p>,
+            },
+          ].map((item, index) => (
+            <ScrollReveal key={item.title} delay={0.1 * index}>
+              <Card className="border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-lg font-heading font-semibold text-foreground">
+                      {item.title}
+                    </h3>
+                  </div>
+                  {item.content}
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
