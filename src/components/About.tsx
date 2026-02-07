@@ -154,7 +154,7 @@ const About = () => {
                 </h3>
               </div>
               <p className="text-muted-foreground font-medium">
-                Kadapa, Andhra Pradesh
+                Andhra Pradesh, India
               </p>
             </CardContent>
           </Card>
