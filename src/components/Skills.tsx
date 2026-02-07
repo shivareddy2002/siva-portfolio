@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Code2, Database, BarChart3, Brain, MessageSquare } from "lucide-react";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Skills = () => {
   const skillCategories = [
@@ -43,9 +44,9 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="skills" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12 animate-fade-in">
+        <ScrollReveal className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
           </h2>
@@ -53,42 +54,37 @@ const Skills = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Proficient in modern data science tools and technologies
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {skillCategories.map((category, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center text-white shadow-lg`}
-                  >
-                    {category.icon}
+            <ScrollReveal key={index} delay={index * 0.08}>
+              <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border">
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center text-white shadow-md`}>
+                      {category.icon}
+                    </div>
+                    <h3 className="text-lg md:text-xl font-heading font-semibold">
+                      {category.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg md:text-xl font-heading font-semibold">
-                    {category.title}
-                  </h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <Badge
-                      key={skillIndex}
-                      variant="secondary"
-                      className="text-sm px-3 py-1.5 hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge
+                        key={skillIndex}
+                        variant="secondary"
+                        className="text-sm px-3 py-1.5 hover:bg-primary hover:text-primary-foreground transition-colors duration-300 cursor-default"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           ))}
         </div>
-
       </div>
     </section>
   );

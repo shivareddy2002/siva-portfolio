@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy, Code, TrendingUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Blog = () => {
   const updates = [
@@ -28,9 +29,9 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="blog" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12 animate-fade-in">
+        <ScrollReveal className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Recent <span className="gradient-text">Updates</span>
           </h2>
@@ -38,37 +39,31 @@ const Blog = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Latest achievements and milestones in my data science journey
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {updates.map((update, index) => (
-            <Card
-              key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 overflow-hidden animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={`h-2 bg-gradient-to-r ${update.color}`} />
-              <CardHeader>
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${update.color} flex items-center justify-center text-white shadow-lg flex-shrink-0`}
-                  >
-                    {update.icon}
+            <ScrollReveal key={index} delay={index * 0.1}>
+              <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border overflow-hidden">
+                <div className={`h-1.5 bg-gradient-to-r ${update.color}`} />
+                <CardHeader>
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${update.color} flex items-center justify-center text-white shadow-md flex-shrink-0`}>
+                      {update.icon}
+                    </div>
+                    <Badge variant="secondary" className="text-xs">{update.badge}</Badge>
                   </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {update.badge}
-                  </Badge>
-                </div>
-                <CardTitle className="text-lg md:text-xl font-heading group-hover:text-primary transition-colors">
-                  {update.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  {update.description}
-                </p>
-              </CardContent>
-            </Card>
+                  <CardTitle className="text-lg md:text-xl font-heading group-hover:text-primary transition-colors duration-300">
+                    {update.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    {update.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
           ))}
         </div>
       </div>
