@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -84,6 +84,12 @@ const Contact = () => {
       label: "GitHub",
       value: "View GitHub Profile",
       href: "https://github.com/shivareddy2002",
+    },
+    {
+      icon: <MessageCircle className="h-5 w-5" />,
+      label: "WhatsApp",
+      value: "+91 9346493592",
+      href: "https://wa.me/919346493592",
     },
   ];
 
