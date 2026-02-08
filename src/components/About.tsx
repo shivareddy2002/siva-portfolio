@@ -28,9 +28,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="about" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
-        <ScrollReveal className="text-center mb-4">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
@@ -94,7 +94,7 @@ const About = () => {
         </div>
 
         {/* Personal Info Section */}
-        <div className="grid md:grid-cols-3 gap-10 mt-7">
+        <div className="grid md:grid-cols-3 gap-6 mt-10">
           {[
             {
               icon: <Globe className="h-5 w-5 text-white" />,

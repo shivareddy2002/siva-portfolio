@@ -4,8 +4,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-8 md:py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-card">
-      <div className="container mx-auto max-w-7xl">
+    <footer className="py-8 md:py-10 px-4 sm:px-6 lg:px-8 border-t border-border bg-card">
+      <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="text-center md:text-left">
@@ -26,7 +26,7 @@ const Footer = () => {
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-15 w-15" />
+              <Linkedin className="h-4 w-4" />
             </a>
             <a
               href="https://github.com/shivareddy2002"
@@ -35,21 +35,21 @@ const Footer = () => {
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="GitHub"
             >
-              <Github className="h-15 w-15" />
+              <Github className="h-4 w-4" />
             </a>
             <a
               href="mailto:lomadasivagangireddy3@gmail.com"
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="Email"
             >
-              <Mail className="h-15 w-15" />
+              <Mail className="h-4 w-4" />
             </a>
             <a
               href="tel:+919346493592"
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="Phone"
             >
-              <Phone className="h-15 w-15" />
+              <Phone className="h-4 w-4" />
             </a>
             <a
               href="https://wa.me/919346493592"
@@ -58,7 +58,7 @@ const Footer = () => {
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="WhatsApp"
             >
-              <MessageCircle className="h-15 w-15" />
+              <MessageCircle className="h-4 w-4" />
             </a>
           </div>
 
