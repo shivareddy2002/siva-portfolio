@@ -9,7 +9,8 @@ const Internships = () => {
     {
       role: "Data Science Intern",
       company: "CEDLEARN",
-      period: "Jul 2025 – Sep 2025",
+      location: "Hyderabad",  
+      period: "Oct 2025 – Dec 2025",
       description: "Worked on Text Generation using GRU, applying deep learning techniques and natural language processing.",
       project: "Text Generation Model",
       achievements: [
@@ -17,7 +18,7 @@ const Internships = () => {
         "Developed and trained a GRU-based neural network using TensorFlow and Keras to generate coherent text.",
         "Deployed the trained model as an interactive web app using Streamlit, demonstrating end-to-end project execution.",
       ],
-      tech: ["Python", "GRU", "RNN", "NLP", "Streamlit", "TensorFlow", "Keras"],
+      tech: ["Python","Deep Learning", "GRU", "RNN", "NLP", "Tokenization","Data Cleaning", "Streamlit", "TensorFlow", "Keras"],
       github: "https://github.com/shivareddy2002/GRU-Text-Generation",
       demo: "https://text-generation-using-gru-model.streamlit.app/",
     },
@@ -36,7 +37,7 @@ const Internships = () => {
           </p>
         </ScrollReveal>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="w-full px-4 sm:px-6 lg:px-12">
           {internships.map((internship, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card className="group hover:shadow-lg transition-all duration-300 border hover:border-primary/30">
@@ -51,7 +52,7 @@ const Internships = () => {
                       </CardTitle>
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-2">
                         <p className="text-lg font-semibold text-foreground">
-                          {internship.company}
+                          {internship.company}, {internship.location}
                         </p>
                         <span className="hidden sm:inline text-muted-foreground">•</span>
                         <p className="text-sm text-muted-foreground">

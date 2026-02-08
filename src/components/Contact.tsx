@@ -44,7 +44,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="contact" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
@@ -59,10 +59,10 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           <ScrollReveal direction="left">
             <Card className="border h-full">
-              <CardHeader>
-                <CardTitle className="text-2xl font-heading">Contact Information</CardTitle>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-xl font-heading">Contact Information</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
+              <CardContent className="space-y-1.5">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
@@ -89,10 +89,10 @@ const Contact = () => {
           <ScrollReveal direction="right" delay={0.15}>
             <Card className="border h-full">
               <CardHeader>
-                <CardTitle className="text-2xl font-heading">Send a Message</CardTitle>
+                <CardTitle className="text-xl font-heading">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
                     <Input id="name" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
@@ -103,9 +103,9 @@ const Contact = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" name="message" placeholder="Your message..." value={formData.message} onChange={handleChange} required rows={3} className="resize-none" />
+                    <Textarea id="message" name="message" placeholder="Your message..." value={formData.message} onChange={handleChange} required rows={2} className="resize-none" />
                   </div>
-                  <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg py-6 transition-opacity duration-300">
+                  <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg py-4 transition-opacity duration-300">
                     {isSubmitting ? "Sending..." : (
                       <>
                         <Send className="mr-2 h-5 w-5" />

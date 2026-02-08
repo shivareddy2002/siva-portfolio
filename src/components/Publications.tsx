@@ -3,34 +3,71 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, Award, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
+import { link } from "fs";
 
 const Publications = () => {
-  const certifications = [
-    {
-      title: "AI Generalist Credential Certificate",
-      issuer: "Digital Maven",
-      category: "AI",
-      link: "https://cdn.certifier.io/3ac07c01-49db-4133-8a1f-2be972b1d5e7/credentials/01k8jtwww21n0bjbrhzcftcq45/designs/01k8jtrmcq2bhzctws0b0reswe/jZAQe4_axG.png",
-    },
-    {
-      title: "SQL – Skill Up Certification",
-      issuer: "GeeksforGeeks",
-      category: "Database",
-      link: "https://www.geeksforgeeks.org/certificate/aa396296b3dc072748325f60e4f16839",
-    },
-    {
-      title: "Data Analyst 101",
-      issuer: "Simplilearn (Microsoft)",
-      category: "Data Analytics",
-      link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjA0IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTY4ODU0OF85OTU4MTE3XzE3Njc3Nzk5MjYyOTQucG5nIiwidXNlcm5hbWUiOiJMT01BREEgU0lWQSBHQU5HSSBSRUREWSJ9",
-    },
-    { title: "Data Science Course", issuer: "CEDLEARN", category: "Data Science" },
-    { title: "Data Science Guided Path", issuer: "Coding Ninjas", category: "Data Science" },
-    { title: "Big Data & Hadoop", issuer: "edX", category: "Big Data" },
-    { title: "SQL Certification", issuer: "Online Platform", category: "Database" },
-    { title: "Machine Learning Internship", issuer: "Industry Partner", category: "ML" },
-    { title: "Wipro Java Full Stack", issuer: "Wipro", category: "Development" },
-  ];
+const certifications = [
+  {
+    title: "Data Analyst",
+    issuer: "Simplilearn (Microsoft)",
+    category: "Data Analytics",
+    link: "https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiIzMjA0IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTY4ODU0OF85OTU4MTE3XzE3Njc3Nzk5MjYyOTQucG5nIiwidXNlcm5hbWUiOiJMT01BREEgU0lWQSBHQU5HSSBSRUREWSJ9",
+  },
+  {
+    title: "Data Science Course",
+    issuer: "CEDLEARN",
+    category: "Data Science",
+    link: null,
+  },
+  {
+    title: "AWS AI-ML",
+    issuer: "EDU skills (Amazon Web Services)",
+    category: "AIMl",
+    link: "https://drive.google.com/file/d/1oVY-wRlsSZPbWT8ikkavb7l6JrnW0crp/view?usp=sharing",
+  },
+  {
+    title: "AI Generalist Credential Certificate",
+    issuer: "Digital Maven",
+    category: "Artificial Intelligence",
+    link: "https://cdn.certifier.io/3ac07c01-49db-4133-8a1f-2be972b1d5e7/credentials/01k8jtwww21n0bjbrhzcftcq45/designs/01k8jtrmcq2bhzctws0b0reswe/jZAQe4_axG.png",
+  },
+  {
+    title: "Cloud Computing",
+    issuer: "Infosys (Microsoft Azure)",
+    category: "Cloud Computing",
+    link: "https://drive.google.com/file/d/1Fd4IhpmPqzvWTVHlhIL5YfqmWdrYVA7t/view?usp=sharing",
+  },
+  {
+    title: "Machine Learning Internship",
+    issuer: "Skill Dzire",
+    category: "Machine Learning",
+    link: "https://drive.google.com/file/d/1e5K8sBKQ5eKzzb7rDWI15LyQ8hmRl8aD/view?usp=sharing",
+  },
+  {
+    title: "C Programming",
+    issuer: "Coding Ninjas",
+    category: "Programming",
+    link: "https://drive.google.com/file/d/1lujzTthCej8-_EbDkpPp-LH4P6QDhMIO/view?usp=sharing",
+  },
+  {
+    title: "Data Science Guided Path",
+    issuer: "Coding Ninjas",
+    category: "Data Science",
+    link: "https://drive.google.com/file/d/1lujzTthCej8-_EbDkpPp-LH4P6QDhMIO/view?usp=sharing",
+  },
+  {
+    title: "Big Data & Hadoop",
+    issuer: "edX",
+    category: "Big Data",
+    link: "https://courses.edx.org/certificates/ead235d82a6143f6873cfd10b9d6f6ec",
+  },
+  {
+    title: "Java Full Stack Development",
+    issuer: "Wipro",
+    category: "Java",
+    link: "https://drive.google.com/file/d/1mhaMJlc-neTrj2ywiQuDC4y90hCTXfXT/view?usp=sharing",
+  },
+];
 
   return (
     <section id="publications" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
@@ -56,34 +93,52 @@ const Publications = () => {
                       Professional Certifications
                     </CardTitle>
                     <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                      9 Certifications
+                      10 Certifications
                     </Badge>
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
-                <div className="grid sm:grid-cols-2 gap-3">
-                  {certifications.map((cert, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-3 p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors duration-300 group"
-                    >
-                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                      <div className="flex-1 min-w-0">
-                        {cert.link ? (
-                          <a href={cert.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                            <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">{cert.title}</h5>
-                          </a>
-                        ) : (
-                          <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">{cert.title}</h5>
-                        )}
-                        <p className="text-xs md:text-sm text-muted-foreground">{cert.issuer}</p>
-                      </div>
-                      <Badge variant="secondary" className="text-xs flex-shrink-0">{cert.category}</Badge>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
+<CardContent>
+  <div className="grid sm:grid-cols-2 gap-3">
+    {certifications.map((cert, index) => (
+      <div
+        key={index}
+        className="flex items-start gap-3 p-3 rounded-lg border border-borderhover:bg-muted/50 transition-colors duration-300 group"
+      >
+        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary
+                        mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
+
+        <div className="flex-1 min-w-0">
+          {cert.link ? (
+            <a
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">
+                {cert.title}
+              </h5>
+            </a>
+          ) : (
+            <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">
+              {cert.title}
+            </h5>
+          )}
+
+          <p className="text-xs md:text-sm text-muted-foreground">
+            {cert.issuer}
+          </p>
+        </div>
+
+        <Badge variant="secondary" className="text-xs flex-shrink-0">
+          {cert.category}
+        </Badge>
+      </div>
+    ))}
+  </div>
+</CardContent>
+
             </Card>
           </ScrollReveal>
 

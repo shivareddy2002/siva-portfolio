@@ -7,7 +7,7 @@ import profileImage from "@/assets/profile.png";
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const [showContent, setShowContent] = useState(false);
-  const fullText = "Aspiring Data Scientist | Python, SQL, ML, DL, NLP | Power BI, Data Visualization";
+  const fullText = "Aspiring Data Scientist | Python, SQL, ML, DL, NLP | Power BI, Excel";
   
   useEffect(() => {
     // Stagger content appearance

@@ -3,36 +3,47 @@ import { ScrollReveal, useScrollReveal } from "@/hooks/useScrollReveal";
 
 const CoreCompetencies = () => {
   const competencies = [
-    { name: "Python & Data Analysis", level: 90 },
+    { name: "Python", level: 90 },
+    { name: "Data Analysis", level: 90 },
     { name: "Machine Learning", level: 85 },
-    { name: "SQL & Database Management", level: 80 },
     { name: "Data Visualization", level: 85 },
+    { name: "SQL & Database Management", level: 80 },
     { name: "Deep Learning", level: 75 },
+    { name: "Power BI & Excel", level: 70 },  
+    { name: "Natural Language Processing", level: 65 },
+    { name: "Java", level: 65 },
+
   ];
 
   return (
     <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="container mx-auto max-w-4xl">
-        <ScrollReveal className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
-            Core <span className="gradient-text">Competencies</span>
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
-        </ScrollReveal>
+  <div className=" mx-auto max-w-5xl">
+    <ScrollReveal className="text-center mb-14">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
+        Core <span className="gradient-text">Competencies</span>
+      </h2>
+      <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
+    </ScrollReveal>
 
-        <ScrollReveal>
-          <Card className="border">
-            <CardContent className="p-6 md:p-8">
-              <div className="space-y-6">
-                {competencies.map((skill, index) => (
-                  <ProgressBar key={index} name={skill.name} level={skill.level} index={index} />
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </ScrollReveal>
-      </div>
-    </section>
+    <ScrollReveal>
+      <Card className="border">
+        <CardContent className="p-6 md:p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {competencies.map((skill, index) => (
+              <ProgressBar
+                key={index}
+                name={skill.name}
+                level={skill.level}
+                index={index}
+              />
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </ScrollReveal>
+  </div>
+</section>
+
   );
 };
 

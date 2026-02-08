@@ -6,21 +6,21 @@ const About = () => {
   const education = [
     {
       degree: "B.Tech in Computer Science & Engineering (Data Science)",
-      institution: "RGMCET",
+      institution: "RGMCET, Nandyal",
       period: "2021 - 2025",
       score: "CGPA: 8.3",
       icon: <GraduationCap className="h-6 w-6" />,
     },
     {
       degree: "Intermediate",
-      institution: "Junior College",
+      institution: "Sri Chaitanya Junior College, Vijayawada",
       period: "2019 - 2021",
       score: "Percentage: 93%",
       icon: <Award className="h-6 w-6" />,
     },
     {
       degree: "High School",
-      institution: "Secondary School",
+      institution: "Geethanjali High School, Proddatur ",
       period: "2018 - 2019",
       score: "GPA: 9.8",
       icon: <TrendingUp className="h-6 w-6" />,
@@ -30,7 +30,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
-        <ScrollReveal className="text-center mb-14">
+        <ScrollReveal className="text-center mb-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
@@ -40,11 +40,12 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Bio */}
           <ScrollReveal direction="left">
+            <h3 className="text-xl md:text-2xl font-heading font-semibold mb-6 flex items-center gap-2">
+              <GraduationCap className="h-6 w-6 text-primary" />
+              Professional Summary
+            </h3>
             <Card className="border hover:shadow-lg transition-all duration-400">
               <CardContent className="p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-heading font-semibold mb-4 text-primary">
-                  Professional Summary
-                </h3>
                 <p className="text-base md:text-lg text-muted-foreground leading-[1.8]">
                   Aspiring Data Scientist with hands-on experience in Machine Learning, Deep Learning, and NLP, passionate about transforming raw data into actionable insights. Skilled in Python, TensorFlow, Streamlit, and advanced data visualization tools like Power BI and Excel. Experienced in building and deploying real-world AI applications, analyzing complex datasets, and generating strategic recommendations. Dedicated to continuous learning, exploring innovative approaches in AI and data science, and solving challenging problems through data-driven solutions. Committed to contributing to impactful projects that drive decision-making, optimize processes, and support business growth. Eager to apply analytical and AI expertise in real-world business and research challenges.
                 </p>
@@ -93,7 +94,7 @@ const About = () => {
         </div>
 
         {/* Personal Info Section */}
-        <div className="grid md:grid-cols-3 gap-6 mt-14">
+        <div className="grid md:grid-cols-3 gap-10 mt-7">
           {[
             {
               icon: <Globe className="h-5 w-5 text-white" />,

@@ -26,7 +26,7 @@ const Footer = () => {
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="LinkedIn"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-15 w-15" />
             </a>
             <a
               href="https://github.com/shivareddy2002"
@@ -35,21 +35,21 @@ const Footer = () => {
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="GitHub"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-15 w-15" />
             </a>
             <a
               href="mailto:lomadasivagangireddy3@gmail.com"
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="Email"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-15 w-15" />
             </a>
             <a
               href="tel:+919346493592"
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="Phone"
             >
-              <Phone className="h-5 w-5" />
+              <Phone className="h-15 w-15" />
             </a>
             <a
               href="https://wa.me/919346493592"
@@ -58,16 +58,16 @@ const Footer = () => {
               className="w-10 h-10 rounded-full border-2 border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all"
               aria-label="WhatsApp"
             >
-              <MessageCircle className="h-5 w-5" />
+              <MessageCircle className="h-15 w-15" />
             </a>
           </div>
 
           {/* Copyright */}
-          <div className="text-center md:text-right">
+          {/* <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground">
               © {currentYear} Lomada Siva Gangi Reddy
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
