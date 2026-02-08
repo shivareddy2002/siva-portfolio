@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, Linkedin, Github, Send, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -28,11 +29,25 @@ const Contact = () => {
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        "service_Siva",
+        "template_1125r79",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "FfWlOU4le8NMIXMqN"
+      );
       toast({ title: "Message Sent!", description: "Thank you for reaching out. I'll get back to you soon!" });
       setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast({ title: "Failed to Send", description: "Something went wrong. Please try again later.", variant: "destructive" });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const contactInfo = [
