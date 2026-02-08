@@ -24,7 +24,7 @@ const GitHubStats = () => {
   ];
 
   return (
-    <section id="github" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section id="github" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">

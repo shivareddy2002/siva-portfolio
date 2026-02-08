@@ -29,7 +29,7 @@ const Blog = () => {
   ];
 
   return (
-    <section id="blog" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="blog" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
