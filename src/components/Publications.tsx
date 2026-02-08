@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { BookOpen, Award, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
-import { link } from "fs";
 
 const Publications = () => {
 const certifications = [
@@ -70,9 +69,9 @@ const certifications = [
 ];
 
   return (
-    <section id="publications" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
-        <ScrollReveal className="text-center mb-14">
+    <section id="publications" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-6xl">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Publications & <span className="gradient-text">Certifications</span>
           </h2>

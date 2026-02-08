@@ -25,9 +25,9 @@ const Internships = () => {
   ];
 
   return (
-    <section id="internships" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="container mx-auto max-w-7xl">
-        <ScrollReveal className="text-center mb-14">
+    <section id="internships" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <div className="container mx-auto max-w-6xl">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Internship <span className="gradient-text">Experience</span>
           </h2>
@@ -37,7 +37,7 @@ const Internships = () => {
           </p>
         </ScrollReveal>
 
-        <div className="w-full px-4 sm:px-6 lg:px-12">
+        <div className="w-full">
           {internships.map((internship, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card className="group hover:shadow-lg transition-all duration-300 border hover:border-primary/30">
