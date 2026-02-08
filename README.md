@@ -29,10 +29,10 @@ It serves as a **digital resume** and a central hub for all my work, including p
 
 ## 🧠 My Skills  
 
-**Programming:** Python, Java, SQL  
+**Programming:** Python, Java, SQL, C  
 **Data Science:** Pandas, NumPy, Scikit-learn, Keras, TensorFlow  
-**Visualization:** Power BI, Matplotlib, Seaborn  
-**Tools:** Git, Jupyter Notebook, Vercel, Flask  
+**Visualization:** Power BI, Matplotlib, Seaborn, Excel  
+**Tools:** Git, Jupyter Notebook, Vercel, Flask, Streamlit   
 
 ---
 
