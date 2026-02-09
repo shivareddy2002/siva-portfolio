@@ -39,11 +39,11 @@ const About = () => {
         {/* Main container with glassmorphism */}
         <ScrollReveal direction="none" delay={0.05}>
           <div className="rounded-2xl border border-primary/20 bg-card/80 backdrop-blur-sm shadow-[0_0_30px_hsl(var(--primary)/0.06)] p-5 md:p-8">
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-7 items-stretch">
               {/* Left – Professional Summary */}
               <ScrollReveal direction="left" delay={0.1}>
-                <div className="rounded-xl bg-muted/40 border border-border/60 p-5 md:p-6 h-full backdrop-blur-sm">
-                  <h3 className="text-lg md:text-xl font-heading font-semibold mb-4 flex items-center gap-2">
+                <div className="rounded-xl bg-muted/40 border border-border/60 p-6 h-full backdrop-blur-sm">
+                  <h3 className="text-base md:text-lg font-heading font-semibold mb-3 flex items-center gap-2">
                     <Briefcase className="h-5 w-5 text-primary" />
                     Professional Summary
                   </h3>
@@ -55,12 +55,12 @@ const About = () => {
 
               {/* Right – Education Timeline */}
               <ScrollReveal direction="right" delay={0.15}>
-                <div className="rounded-xl bg-muted/40 border border-border/60 p-5 md:p-6 h-full backdrop-blur-sm">
-                  <h3 className="text-lg md:text-xl font-heading font-semibold mb-4 flex items-center gap-2">
+                <div className="rounded-xl bg-muted/40 border border-border/60 p-6 h-full backdrop-blur-sm">
+                  <h3 className="text-base md:text-lg font-heading font-semibold mb-3 flex items-center gap-2">
                     <GraduationCap className="h-5 w-5 text-primary" />
                     Education Timeline
                   </h3>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {education.map((edu, index) => (
                       <ScrollReveal key={index} delay={0.15 + index * 0.1}>
                         <div className="rounded-lg border border-border/50 border-l-[3px] border-l-primary bg-card/60 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_20px_hsl(var(--primary)/0.1)] group">
