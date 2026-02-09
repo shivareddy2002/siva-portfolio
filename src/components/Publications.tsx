@@ -69,9 +69,9 @@ const certifications = [
 ];
 
   return (
-    <section id="publications" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-6xl">
-        <ScrollReveal className="text-center mb-12">
+    <section id="publications" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl">
+        <ScrollReveal className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Publications & <span className="gradient-text">Certifications</span>
           </h2>

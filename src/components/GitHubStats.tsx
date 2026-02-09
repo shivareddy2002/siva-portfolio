@@ -24,9 +24,9 @@ const GitHubStats = () => {
   ];
 
   return (
-    <section id="github" className="py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-6xl">
-        <ScrollReveal className="text-center mb-12">
+    <section id="github" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl">
+        <ScrollReveal className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Github className="h-10 w-10 text-primary" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold">
@@ -56,7 +56,7 @@ const GitHubStats = () => {
           ))}
         </div>
 
-        <ScrollReveal className="mt-12 text-center">
+        <ScrollReveal className="mt-8 text-center">
           <a
             href={`https://github.com/${username}`}
             target="_blank"
