@@ -39,7 +39,7 @@ const GitHubStats = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {stats.map((stat, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border overflow-hidden">

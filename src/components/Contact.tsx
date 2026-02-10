@@ -71,7 +71,7 @@ const Contact = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
           <ScrollReveal direction="left">
             <Card className="border h-full">
               <CardHeader className="pb-2">
