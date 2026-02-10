@@ -9,37 +9,37 @@ const Skills = () => {
       title: "Programming Languages",
       icon: <Code2 className="h-6 w-6" />,
       skills: ["Python", "SQL", "Java", "C", "HTML", "CSS"],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-primary to-secondary",
     },
     {
       title: "Data Science & ML",
       icon: <Brain className="h-6 w-6" />,
       skills: ["Machine Learning", "Deep Learning", "TensorFlow", "Scikit-learn", "NLP"],
-      color: "from-purple-500 to-pink-500",
+      color: "from-primary to-accent",
     },
     {
       title: "Data Analysis & Visualization",
       icon: <BarChart3 className="h-6 w-6" />,
       skills: ["Power BI", "Excel", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-secondary to-primary",
     },
     {
       title: "Databases & Tools",
       icon: <Database className="h-6 w-6" />,
       skills: ["MySQL", "Git", "GitHub", "Jupyter", "VS Code"],
-      color: "from-orange-500 to-red-500",
+      color: "from-accent to-primary",
     },
     {
       title: "Other Technical Skills",
       icon: <Code2 className="h-6 w-6" />,
       skills: ["Data Preprocessing", "Feature Engineering", "Model Evaluation", "Data Visualization Dashboards"],
-      color: "from-cyan-500 to-blue-500",
+      color: "from-primary to-secondary",
     },
     {
       title: "Soft Skills",
       icon: <MessageSquare className="h-6 w-6" />,
       skills: ["Teamwork", "Problem Solving", "Communication", "Quick Learning", "Time Management", "Analytical Thinking"],
-      color: "from-indigo-500 to-purple-500",
+      color: "from-secondary to-accent",
     },
   ];
 
@@ -56,7 +56,7 @@ const Skills = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
             <ScrollReveal key={index} delay={index * 0.08}>
               <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border">

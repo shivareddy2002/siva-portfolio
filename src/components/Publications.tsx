@@ -102,7 +102,7 @@ const certifications = [
     {certifications.map((cert, index) => (
       <div
         key={index}
-        className="flex items-start gap-3 p-3 rounded-lg border border-borderhover:bg-muted/50 transition-colors duration-300 group"
+        className="flex items-start gap-3 p-3 rounded-lg border border-border hover:bg-muted/50 transition-colors duration-300 group"
       >
         <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary
                         mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />

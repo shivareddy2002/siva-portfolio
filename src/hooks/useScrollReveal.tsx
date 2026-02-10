@@ -44,9 +44,9 @@ export const ScrollReveal = ({ children, className = "", delay = 0, direction = 
 
   const getTransform = () => {
     switch (direction) {
-      case "up": return "translateY(24px)";
-      case "left": return "translateX(-24px)";
-      case "right": return "translateX(24px)";
+      case "up": return "translateY(12px)";
+      case "left": return "translateX(-12px)";
+      case "right": return "translateX(12px)";
       case "none": return "none";
     }
   };

@@ -10,21 +10,21 @@ const Blog = () => {
       description: "Secured impressive 93.91 percentile in the competitive Naukri Campus Young Turks assessment, demonstrating strong analytical and problem-solving capabilities.",
       icon: <Trophy className="h-6 w-6" />,
       badge: "Achievement",
-      color: "from-yellow-500 to-orange-500",
+      color: "from-primary to-accent",
     },
     {
       title: "Coding Challenge Milestone",
       description: "Successfully solved 50+ coding challenges across LeetCode and GeeksforGeeks platforms, showcasing consistency in algorithmic problem-solving and data structures mastery.",
       icon: <Code className="h-6 w-6" />,
       badge: "Coding",
-      color: "from-green-500 to-emerald-500",
+      color: "from-secondary to-primary",
     },
     {
       title: "Continuous Learning Journey",
       description: "Actively expanding expertise in advanced machine learning techniques, deep learning frameworks, and modern data engineering practices through hands-on projects and certifications.",
       icon: <TrendingUp className="h-6 w-6" />,
       badge: "Growth",
-      color: "from-blue-500 to-purple-500",
+      color: "from-primary to-secondary",
     },
   ];
 
@@ -41,7 +41,7 @@ const Blog = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {updates.map((update, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border overflow-hidden">
