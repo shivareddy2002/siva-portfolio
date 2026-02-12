@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ParticleBackground from "@/components/ParticleBackground";
+import DashboardStats from "@/components/DashboardStats";
 import About from "@/components/About";
 import Internships from "@/components/Internships";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import SkillsChart from "@/components/SkillsChart";
 import Publications from "@/components/Publications";
 import CoreCompetencies from "@/components/CoreCompetencies";
 import Blog from "@/components/Blog";
@@ -33,12 +36,15 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      <ParticleBackground />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
+      <DashboardStats />
       <About />
       <Internships />
       <Projects />
+      <SkillsChart />
       <Skills />
       <Publications />
       <CoreCompetencies />
