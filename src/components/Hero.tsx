@@ -11,7 +11,7 @@ const Hero = () => {
   
   useEffect(() => {
     // Stagger content appearance
-    const timer = setTimeout(() => setShowContent(true), 200);
+    const timer = setTimeout(() => setShowContent(true), 300);
     return () => clearTimeout(timer);
   }, []);
 

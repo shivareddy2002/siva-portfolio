@@ -40,11 +40,11 @@ const Index = () => {
       <ParticleBackground />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
-      <DashboardStats />
+      {/* <DashboardStats /> */}
       <About />
       <Internships />
       <Projects />
-      <SkillsChart />
+      {/* <SkillsChart /> */}
       <Skills />
       <Publications />
       <CoreCompetencies />

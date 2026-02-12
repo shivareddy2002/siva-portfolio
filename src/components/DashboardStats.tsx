@@ -58,14 +58,14 @@ const DashboardStats = () => {
     },
     {
       label: "Certifications",
-      value: 5,
+      value: 10,
       suffix: "+",
       icon: <Award className="h-6 w-6" />,
       glow: "from-indigo-500/20 to-purple-500/20",
     },
     {
       label: "GitHub Contributions",
-      value: 200,
+      value: 100,
       suffix: "+",
       icon: <GitCommit className="h-6 w-6" />,
       glow: "from-purple-500/20 to-cyan-500/20",
