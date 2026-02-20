@@ -6,16 +6,16 @@ const GitHubStats = () => {
   const username = "shivareddy2002";
   
   const stats = [
-    {
-      title: "GitHub Profile Stats",
-      url: `https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=10B981&text_color=E5E7EB`,
-      alt: "GitHub Stats",
-    },
-    {
-      title: "Most Used Languages",
-      url: `https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=E5E7EB`,
-      alt: "Top Languages",
-    },
+    // {
+    //   title: "GitHub Profile Stats",
+    //   url: `https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=10B981&text_color=E5E7EB`,
+    //   alt: "GitHub Stats",
+    // },
+    // {
+    //   title: "Most Used Languages",
+    //   url: `https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=E5E7EB`,
+    //   alt: "Top Languages",
+    // },
     {
       title: "GitHub Streak",
       url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=radical&hide_border=true&background=0D1117&ring=3B82F6&fire=10B981&currStreakLabel=E5E7EB`,
