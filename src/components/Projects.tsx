@@ -28,7 +28,7 @@ const Projects = () => {
       demo: "https://shivareddy2002.github.io/Word-Search-Chatbot-Using-Wikipedia-/",
     },
     {
-      title: "Zomato Data Analysis Dashboard & Recommendation System",
+      title: "Zomato Data Analysis Dashboard",
       description: "Analyzed restaurant dataset to identify patterns in ratings, food types, and pricing. Built visualizations for customer preferences and restaurant performance evaluation.",
       tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Streamlit"],
       github: "https://github.com/shivareddy2002/Zomato-Data-Analysis-Dashboard",
@@ -60,7 +60,7 @@ const Projects = () => {
       description: "NLP emotion detection app classifying six human emotions from text using BiLSTM with confidence-based predictions.",
       tech: ["Python", "TensorFlow", "Keras", "NLP", "Scikit-learn", "Flask", "Bootstrap", "Vercel"],
       github: "https://github.com/shivareddy2002/Emotion-AI",
-      demo: "https://emotion-ai-rust.vercel.app/",
+      demo: "https://emotion-ai-tan.vercel.app/",
     },
   ];
 
