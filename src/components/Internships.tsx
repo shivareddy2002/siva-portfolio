@@ -8,7 +8,7 @@ const Internships = () => {
   const internships = [
     {
       role: "Data Science Intern",
-      company: "CEDLEARN",
+      company: "CeduraTech",
       location: "Hyderabad",  
       period: "Oct 2025 – Dec 2025",
       description: "Worked on Text Generation using GRU, applying deep learning techniques and natural language processing.",

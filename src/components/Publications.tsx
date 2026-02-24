@@ -66,6 +66,24 @@ const certifications = [
     category: "Java",
     link: "https://drive.google.com/file/d/1mhaMJlc-neTrj2ywiQuDC4y90hCTXfXT/view?usp=sharing",
   },
+  {
+    title: "LLM Concepts",
+    issuer: "DataCamp",
+    category: "Generative AI",
+    link: "https://www.datacamp.com/completed/statement-of-accomplishment/course/875e319a4be508360ddd8d4ae43bdaddf1fa8693",
+  },
+  {
+    title: "Generative AI Concepts",
+    issuer: "DataCamp",
+    category: "Generative AI",
+    link: "https://www.datacamp.com/completed/statement-of-accomplishment/course/7a07290d4619b51a6d2b8f41216eb4e2f9475a9d",
+  },
+  {
+    title: "Power BI Fundamentals",
+    issuer: "DataCamp",
+    category: "Analytics",
+    link: "https://www.datacamp.com/completed/statement-of-accomplishment/course/a7836d11a5c6362f32cfb6bd5702781c73b0ca04",
+  },
 ];
 
   return (
@@ -92,7 +110,7 @@ const certifications = [
                       Professional Certifications
                     </CardTitle>
                     <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                      10 Certifications
+                      13 Certifications
                     </Badge>
                   </div>
                 </div>
