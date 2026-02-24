@@ -7,20 +7,6 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Projects = () => {
   const projects = [
     {
-      title: "Stroke Detection from CT & MRI Images",
-      description: "Multimodal deep learning web app predicting stroke type from CT and MRI scans. Integrates CNN + BiGRU hybrid modeling with classical ML pipelines and interactive visualization for medical image analysis.",
-      tech: ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "Plotly", "Scikit-learn", "Vercel"],
-      github: "https://github.com/shivareddy2002/stroke-detection",
-      demo: "https://stroke-detection.vercel.app/",
-    },
-    {
-      title: "Emotion Detection from Text using BiLSTM",
-      description: "Real-time NLP emotion detection web app classifying six human emotions from text using a Bidirectional LSTM neural network with confidence-based predictions through an interactive Flask interface.",
-      tech: ["Python", "TensorFlow", "Keras", "NLP", "Scikit-learn", "Flask", "Bootstrap", "Vercel"],
-      github: "https://github.com/shivareddy2002/Emotion-AI",
-      demo: "https://emotion-ai-seven-nu.vercel.app/",
-    },
-    {
       title: "Water Stress Prediction",
       description: "Advanced prediction system using CNN+LSTM+ML algorithms on IoT sensor data to forecast water stress levels in tomato plants with high accuracy.",
       tech: ["Python", "TensorFlow", "CNN", "LSTM", "IoT", "ML"],
@@ -61,6 +47,20 @@ const Projects = () => {
       tech: ["Power BI", "SQL", "DAX", "Data Modeling", "Data Visualization"],
       github: "https://github.com/shivareddy2002/Credit_Card_Transaction_Report",
       demo: "https://drive.google.com/drive/folders/16T65EOoXPGIZTcLpNTc-AbGHeKpTW9zG?usp=sharing",
+    },
+    {
+      title: "Stroke Detection",
+      description: "Deep learning web app predicting stroke type from CT and MRI scans using CNN + BiGRU hybrid modeling with interactive visualization.",
+      tech: ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "Plotly", "Scikit-learn", "Vercel"],
+      github: "https://github.com/shivareddy2002/stroke-detection",
+      demo: "https://stroke-detection.vercel.app/",
+    },
+    {
+      title: "Emotion Detection",
+      description: "NLP emotion detection app classifying six human emotions from text using BiLSTM with confidence-based predictions.",
+      tech: ["Python", "TensorFlow", "Keras", "NLP", "Scikit-learn", "Flask", "Bootstrap", "Vercel"],
+      github: "https://github.com/shivareddy2002/Emotion-AI",
+      demo: "https://emotion-ai-rust.vercel.app/",
     },
   ];
 
