@@ -14,7 +14,7 @@ const Skills = () => {
     {
       title: "Data Science & ML",
       icon: <Brain className="h-6 w-6" />,
-      skills: ["Machine Learning", "Deep Learning", "TensorFlow", "Scikit-learn", "NLP"],
+      skills: ["Machine Learning", "Deep Learning", "TensorFlow", "Scikit-learn", "NLP", "LLM"],
       color: "from-primary to-accent",
     },
     {
