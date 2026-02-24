@@ -7,7 +7,7 @@ interface ScrollRevealOptions {
 }
 
 export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
-  const { threshold = 0.15, rootMargin = "0px 0px -50px 0px", triggerOnce = true } = options;
+  const { threshold = 0.12, rootMargin = "0px 0px -60px 0px", triggerOnce = true } = options;
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,10 +44,10 @@ export const ScrollReveal = ({ children, className = "", delay = 0, direction = 
 
   const getTransform = () => {
     switch (direction) {
-      case "up": return "translateY(12px)";
-      case "left": return "translateX(-12px)";
-      case "right": return "translateX(12px)";
-      case "none": return "none";
+      case "up": return "translateY(24px)";
+      case "left": return "translateX(-24px)";
+      case "right": return "translateX(24px)";
+      case "none": return "translateY(0)";
     }
   };
 
@@ -57,8 +57,10 @@ export const ScrollReveal = ({ children, className = "", delay = 0, direction = 
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "none" : getTransform(),
-        transition: `opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delay}s`,
+        transform: isVisible ? "translateY(0) translateX(0)" : getTransform(),
+        filter: isVisible ? "blur(0px)" : "blur(6px)",
+        transition: `opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s, filter 0.8s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`,
+        willChange: "opacity, transform, filter",
       }}
     >
       {children}

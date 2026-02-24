@@ -25,25 +25,25 @@ const Internships = () => {
   ];
 
   return (
-    <section id="internships" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="internships" className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
-        <ScrollReveal className="text-center mb-8">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Internship <span className="gradient-text">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
+          <div className="section-divider" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Hands-on industry experience in data science and AI development
           </p>
         </ScrollReveal>
 
-        <div className="w-full">
+        <div className="w-full max-w-4xl mx-auto">
           {internships.map((internship, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <Card className="group hover:shadow-lg transition-all duration-300 border hover:border-primary/30">
-                <CardHeader>
+              <Card className="group card-lift border hover:border-primary/30">
+                <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
                       <Briefcase className="h-6 w-6" />
                     </div>
                     <div className="flex-1">
@@ -61,17 +61,17 @@ const Internships = () => {
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-sm md:text-base mt-4 pl-16">
+                  <CardDescription className="text-sm md:text-base mt-4 pl-[60px]">
                     {internship.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6 pl-16">
+                <CardContent className="space-y-6 pl-[60px]">
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
-                    <ul className="space-y-2 text-muted-foreground">
+                    <ul className="space-y-2.5 text-muted-foreground">
                       {internship.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex gap-2">
-                          <span className="text-primary mt-1">◦</span>
+                        <li key={idx} className="flex gap-2.5">
+                          <span className="text-primary mt-1 flex-shrink-0">◦</span>
                           <span className="text-sm md:text-base leading-relaxed">{achievement}</span>
                         </li>
                       ))}
@@ -92,13 +92,13 @@ const Internships = () => {
                     </div>
                   </div>
                   <div className="flex gap-3 pt-2">
-                    <Button variant="outline" size="sm" className="flex-1 sm:flex-initial hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                    <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
                       <a href={internship.github} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
                         View Code
                       </a>
                     </Button>
-                    <Button variant="default" size="sm" className="flex-1 sm:flex-initial bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity duration-300" asChild>
+                    <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
                       <a href={internship.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo
