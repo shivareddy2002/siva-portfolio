@@ -15,7 +15,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -38,9 +38,9 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-md"
+          ? "bg-background/80 backdrop-blur-xl shadow-lg border-b border-border/50"
           : "bg-transparent"
       }`}
     >
@@ -53,7 +53,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-2xl md:text-3xl font-heading font-bold gradient-text hover:opacity-80 transition-opacity"
+            className="text-2xl md:text-3xl font-heading font-bold gradient-text hover:opacity-80 transition-opacity duration-300"
           >
             LSGR
           </a>
@@ -68,17 +68,17 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="px-3 lg:px-4 py-2 text-sm lg:text-base font-medium text-foreground/80 hover:text-primary transition-colors relative group"
+                className="px-3 lg:px-4 py-2 text-sm lg:text-base font-medium text-foreground/70 hover:text-primary transition-colors duration-300 relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-3/4 rounded-full" />
               </a>
             ))}
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="ml-2"
+              className="ml-2 hover:bg-primary/10 transition-colors duration-300"
               aria-label="Toggle theme"
             >
               {theme === "light" ? (
@@ -119,9 +119,13 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-background/95 backdrop-blur-md border-t border-border animate-fade-in">
-            <div className="flex flex-col space-y-2">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-400 ease-out ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="py-4 bg-background/95 backdrop-blur-xl border-t border-border/50">
+            <div className="flex flex-col space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -130,14 +134,14 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="px-4 py-2 text-base font-medium text-foreground/80 hover:text-primary hover:bg-muted rounded-md transition-colors"
+                  className="px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-300"
                 >
                   {link.label}
                 </a>
               ))}
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

@@ -132,12 +132,45 @@
     mask-composite: exclude;
   }
 
-  /* Premium card hover */
+  /* Professional card hover */
   .card-hover {
-    @apply transition-all duration-400;
+    @apply transition-all duration-300;
   }
   .card-hover:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
     box-shadow: var(--shadow-hover);
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply w-16 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4 rounded-full;
+  }
+
+  /* Smooth card lift */
+  .card-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.15);
+  }
+
+  /* Gradient button glow */
+  .btn-glow {
+    position: relative;
+  }
+  .btn-glow::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+    filter: blur(12px);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+  }
+  .btn-glow:hover::after {
+    opacity: 0.4;
   }
 }

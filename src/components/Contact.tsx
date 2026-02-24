@@ -33,11 +33,7 @@ const Contact = () => {
       await emailjs.send(
         "service_Siva",
         "template_1125r79",
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
+        { name: formData.name, email: formData.email, message: formData.message },
         "FfWlOU4le8NMIXMqN"
       );
       toast({ title: "Message Sent!", description: "Thank you for reaching out. I'll get back to you soon!" });
@@ -59,38 +55,38 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="contact" className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
-        <ScrollReveal className="text-center mb-8">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
+          <div className="section-divider" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Let's discuss how I can contribute to your team
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid lg:grid-cols-2 gap-8">
           <ScrollReveal direction="left">
             <Card className="border h-full">
-              <CardHeader className="pb-2">
+              <CardHeader className="pb-3">
                 <CardTitle className="text-xl font-heading">Contact Information</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-1.5">
+              <CardContent className="space-y-2">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.href}
                     target={info.href.startsWith("http") ? "_blank" : undefined}
                     rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-4 p-4 rounded-lg border border-border hover:bg-muted/50 transition-all duration-300 hover:-translate-y-0.5 group"
+                    className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-muted/50 hover:border-primary/20 transition-all duration-300 group"
                   >
-                    <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                       {info.icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wide">{info.label}</p>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{info.label}</p>
                       <p className="font-medium text-sm md:text-base truncate group-hover:text-primary transition-colors duration-300">
                         {info.value}
                       </p>
@@ -101,26 +97,26 @@ const Contact = () => {
             </Card>
           </ScrollReveal>
 
-          <ScrollReveal direction="right" delay={0.15}>
+          <ScrollReveal direction="right" delay={0.12}>
             <Card className="border h-full">
               <CardHeader>
                 <CardTitle className="text-xl font-heading">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
+                    <Input id="name" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required className="h-11" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} required />
+                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} required className="h-11" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" name="message" placeholder="Your message..." value={formData.message} onChange={handleChange} required rows={2} className="resize-none" />
+                    <Textarea id="message" name="message" placeholder="Your message..." value={formData.message} onChange={handleChange} required rows={3} className="resize-none" />
                   </div>
-                  <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg py-4 transition-opacity duration-300">
+                  <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-base py-5 transition-all duration-300 btn-glow">
                     {isSubmitting ? "Sending..." : (
                       <>
                         <Send className="mr-2 h-5 w-5" />

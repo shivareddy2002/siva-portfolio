@@ -65,23 +65,23 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
-        <ScrollReveal className="text-center mb-8">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
+          <div className="section-divider" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Showcasing hands-on experience in data science, machine learning, and analytics
           </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 0.08}>
-              <Card className="group h-full flex flex-col hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30">
-                <CardHeader className="flex-1">
+            <ScrollReveal key={index} delay={index * 0.06}>
+              <Card className="group h-full flex flex-col card-lift border hover:border-primary/30 overflow-hidden">
+                <CardHeader className="flex-1 pb-3">
                   <CardTitle className="text-lg md:text-xl font-heading group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </CardTitle>
@@ -89,13 +89,13 @@ const Projects = () => {
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex flex-wrap gap-2">
+                <CardContent className="space-y-4 pt-0">
+                  <div className="flex flex-wrap gap-1.5">
                     {project.tech.map((tech, techIndex) => (
                       <Badge
                         key={techIndex}
                         variant="secondary"
-                        className="text-xs bg-gradient-to-r from-primary/10 to-secondary/10"
+                        className="text-xs bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 transition-colors duration-300"
                       >
                         {tech}
                       </Badge>
@@ -108,7 +108,7 @@ const Projects = () => {
                         Code
                       </a>
                     </Button>
-                    <Button variant="default" size="sm" className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity duration-300" asChild>
+                    <Button variant="default" size="sm" className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Demo

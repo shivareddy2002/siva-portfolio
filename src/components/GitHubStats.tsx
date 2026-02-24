@@ -24,25 +24,25 @@ const GitHubStats = () => {
   ];
 
   return (
-    <section id="github" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8">
+    <section id="github" className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
-        <ScrollReveal className="text-center mb-8">
+        <ScrollReveal className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Github className="h-10 w-10 text-primary" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold">
               GitHub <span className="gradient-text">Statistics</span>
             </h2>
           </div>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-4" />
+          <div className="section-divider" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Live stats showcasing coding activity and contributions
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {stats.map((stat, index) => (
-            <ScrollReveal key={index} delay={index * 0.1}>
-              <Card className="group h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border overflow-hidden">
+            <ScrollReveal key={index} delay={index * 0.08}>
+              <Card className="group h-full card-lift border overflow-hidden">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-heading font-semibold mb-4 text-center group-hover:text-primary transition-colors duration-300">
                     {stat.title}
@@ -56,12 +56,12 @@ const GitHubStats = () => {
           ))}
         </div>
 
-        <ScrollReveal className="mt-8 text-center">
+        <ScrollReveal className="mt-10 text-center">
           <a
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:opacity-90 transition-opacity duration-300 shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl btn-glow"
           >
             <Github className="h-5 w-5" />
             View Full GitHub Profile

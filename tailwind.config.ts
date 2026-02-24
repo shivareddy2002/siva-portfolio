@@ -73,12 +73,12 @@ export default {
           to: { height: "0" },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(16px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" }
+          "0%": { opacity: "0", transform: "translateY(20px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" }
         },
         "slide-in": {
-          "0%": { opacity: "0", transform: "translateX(-16px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" }
+          "0%": { opacity: "0", transform: "translateX(-20px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateX(0)", filter: "blur(0)" }
         },
         "typing": {
           "0%": { width: "0" },
@@ -89,8 +89,8 @@ export default {
           "50%": { opacity: "0" }
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" }
+          "0%, 100%": { transform: "translateY(0px) scale(1)" },
+          "50%": { transform: "translateY(-16px) scale(1.02)" }
         },
         "pulse-slow": {
           "0%, 100%": { opacity: "1" },
@@ -99,18 +99,28 @@ export default {
         "progress-fill": {
           "0%": { width: "0%" },
           "100%": { width: "var(--target-width)" }
-        }
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" }
+        },
+        "scale-up": {
+          "0%": { transform: "scale(0.95)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" }
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
-        "slide-in": "slide-in 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
+        "fade-in": "fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "slide-in": "slide-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both",
         "typing": "typing 3.5s steps(40, end)",
-        "blink": "blink 1s infinite",
-        "float": "float 4s ease-in-out infinite",
+        "blink": "blink 1s ease-in-out infinite",
+        "float": "float 5s ease-in-out infinite",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
-        "progress-fill": "progress-fill 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both"
+        "progress-fill": "progress-fill 1.2s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "shimmer": "shimmer 2s linear infinite",
+        "scale-up": "scale-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
