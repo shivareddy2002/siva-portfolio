@@ -77,40 +77,46 @@ const Projects = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 0.06}>
+            <ScrollReveal key={index} delay={index * 0.05}>
               <Card className="group h-full flex flex-col card-lift border hover:border-primary/30 overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="flex-1 pb-3">
-                  <CardTitle className="text-lg md:text-xl font-heading group-hover:text-primary transition-colors duration-300">
+                  <CardTitle className="text-base md:text-lg font-heading group-hover:text-primary transition-colors duration-300 leading-snug">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-sm md:text-base mt-2 leading-relaxed">
+                  <CardDescription className="text-xs md:text-sm mt-2 leading-relaxed line-clamp-3">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4 pt-0">
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tech.map((tech, techIndex) => (
+                <CardContent className="space-y-3 pt-0">
+                  <div className="flex flex-wrap gap-1">
+                    {project.tech.slice(0, 5).map((tech, techIndex) => (
                       <Badge
                         key={techIndex}
                         variant="secondary"
-                        className="text-xs bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 transition-colors duration-300"
+                        className="text-[10px] px-2 py-0.5 bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 transition-colors duration-300"
                       >
                         {tech}
                       </Badge>
                     ))}
+                    {project.tech.length > 5 && (
+                      <Badge variant="secondary" className="text-[10px] px-2 py-0.5">
+                        +{project.tech.length - 5}
+                      </Badge>
+                    )}
                   </div>
-                  <div className="flex gap-3 pt-2">
-                    <Button variant="outline" size="sm" className="flex-1 hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                  <div className="flex gap-2 pt-1">
+                    <Button variant="outline" size="sm" className="flex-1 text-xs h-8 hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
+                        <Github className="h-3.5 w-3.5 mr-1.5" />
                         Code
                       </a>
                     </Button>
-                    <Button variant="default" size="sm" className="flex-1 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
+                    <Button variant="default" size="sm" className="flex-1 text-xs h-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
+                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
                         Demo
                       </a>
                     </Button>

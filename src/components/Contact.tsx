@@ -67,27 +67,27 @@ const Contact = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 items-stretch">
           <ScrollReveal direction="left">
             <Card className="border h-full">
-              <CardHeader className="pb-3">
+              <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-heading">Contact Information</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
+              <CardContent className="space-y-3">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.href}
                     target={info.href.startsWith("http") ? "_blank" : undefined}
                     rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-4 p-4 rounded-xl border border-border hover:bg-muted/50 hover:border-primary/20 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-3.5 rounded-xl border border-border hover:bg-muted/50 hover:border-primary/20 transition-all duration-300 group"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                       {info.icon}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider font-medium">{info.label}</p>
-                      <p className="font-medium text-sm md:text-base truncate group-hover:text-primary transition-colors duration-300">
+                      <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">{info.label}</p>
+                      <p className="font-medium text-sm truncate group-hover:text-primary transition-colors duration-300">
                         {info.value}
                       </p>
                     </div>
@@ -99,22 +99,24 @@ const Contact = () => {
 
           <ScrollReveal direction="right" delay={0.12}>
             <Card className="border h-full">
-              <CardHeader>
+              <CardHeader className="pb-4">
                 <CardTitle className="text-xl font-heading">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required className="h-11" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" name="email" type="email" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} required className="h-11" />
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required className="h-11" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" name="email" type="email" placeholder="your.email@example.com" value={formData.email} onChange={handleChange} required className="h-11" />
+                    </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" name="message" placeholder="Your message..." value={formData.message} onChange={handleChange} required rows={3} className="resize-none" />
+                    <Textarea id="message" name="message" placeholder="Your message..." value={formData.message} onChange={handleChange} required rows={5} className="resize-none" />
                   </div>
                   <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-base py-5 transition-all duration-300 btn-glow">
                     {isSubmitting ? "Sending..." : (

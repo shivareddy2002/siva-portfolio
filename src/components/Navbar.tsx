@@ -10,10 +10,21 @@ interface NavbarProps {
 const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Active section detection
+      const sections = ["home", "about", "internships", "projects", "skills", "publications", "blog", "github", "contact"];
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el && el.getBoundingClientRect().top <= 100) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -46,13 +57,9 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <a
             href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#home");
-            }}
+            onClick={(e) => { e.preventDefault(); scrollToSection("#home"); }}
             className="text-2xl md:text-3xl font-heading font-bold gradient-text hover:opacity-80 transition-opacity duration-300"
           >
             LSGR
@@ -60,20 +67,27 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(link.href);
-                }}
-                className="px-3 lg:px-4 py-2 text-sm lg:text-base font-medium text-foreground/70 hover:text-primary transition-colors duration-300 relative group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-3/4 rounded-full" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const sectionId = link.href.replace("#", "");
+              const isActive = activeSection === sectionId;
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                  className={`px-3 lg:px-4 py-2 text-sm lg:text-base font-medium transition-colors duration-300 relative group ${
+                    isActive ? "text-primary" : "text-foreground/70 hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-300 ${
+                      isActive ? "w-3/4" : "w-0 group-hover:w-3/4"
+                    }`}
+                  />
+                </a>
+              );
+            })}
             <Button
               variant="ghost"
               size="icon"
@@ -81,39 +95,20 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
               className="ml-2 hover:bg-primary/10 transition-colors duration-300"
               aria-label="Toggle theme"
             >
-              {theme === "light" ? (
-                <Moon className="h-5 w-5" />
-              ) : (
-                <Sun className="h-5 w-5" />
-              )}
+              {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile */}
           <div className="flex items-center md:hidden space-x-2">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-            >
-              {theme === "light" ? (
-                <Moon className="h-5 w-5" />
-              ) : (
-                <Sun className="h-5 w-5" />
-              )}
+            <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+            <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu">
+              <div className="relative w-6 h-6 flex items-center justify-center">
+                <X className={`h-6 w-6 absolute transition-all duration-300 ${isMobileMenuOpen ? "rotate-0 opacity-100" : "rotate-90 opacity-0"}`} />
+                <Menu className={`h-6 w-6 absolute transition-all duration-300 ${isMobileMenuOpen ? "-rotate-90 opacity-0" : "rotate-0 opacity-100"}`} />
+              </div>
             </Button>
           </div>
         </div>
@@ -124,21 +119,26 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
             isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="py-4 bg-background/95 backdrop-blur-xl border-t border-border/50">
+          <div className="py-4 bg-background/95 backdrop-blur-xl border-t border-border/50 rounded-b-xl">
             <div className="flex flex-col space-y-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
-                  className="px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-muted/50 rounded-lg transition-all duration-300"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const sectionId = link.href.replace("#", "");
+                const isActive = activeSection === sectionId;
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                    className={`px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
+                      isActive
+                        ? "text-primary bg-primary/10"
+                        : "text-foreground/80 hover:text-primary hover:bg-muted/50"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

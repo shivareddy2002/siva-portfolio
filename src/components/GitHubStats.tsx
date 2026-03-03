@@ -7,17 +7,17 @@ const GitHubStats = () => {
   
   const stats = [
     {
-      title: "GitHub Profile Stats",
+      title: "Profile Stats",
       url: `https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=10B981&text_color=E5E7EB`,
       alt: "GitHub Stats",
     },
     {
-      title: "GitHub Streak",
+      title: "Streak",
       url: `https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=radical&hide_border=true&background=0D1117&ring=3B82F6&fire=10B981&currStreakLabel=E5E7EB`,
       alt: "GitHub Streak",
     },
     {
-      title: "Most Used Languages",
+      title: "Top Languages",
       url: `https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=E5E7EB`,
       alt: "Top Languages",
     },
@@ -28,7 +28,7 @@ const GitHubStats = () => {
       <div className="container mx-auto max-w-7xl">
         <ScrollReveal className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Github className="h-10 w-10 text-primary" />
+            <Github className="h-8 w-8 md:h-10 md:w-10 text-primary" />
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold">
               GitHub <span className="gradient-text">Statistics</span>
             </h2>
@@ -39,15 +39,15 @@ const GitHubStats = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {stats.map((stat, index) => (
             <ScrollReveal key={index} delay={index * 0.08}>
               <Card className="group h-full card-lift border overflow-hidden">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-heading font-semibold mb-4 text-center group-hover:text-primary transition-colors duration-300">
+                <CardContent className="p-4 md:p-5">
+                  <h3 className="text-sm font-heading font-semibold mb-3 text-center group-hover:text-primary transition-colors duration-300">
                     {stat.title}
                   </h3>
-                  <div className="relative rounded-lg overflow-hidden bg-[#0D1117] p-4">
+                  <div className="relative rounded-lg overflow-hidden bg-[#0D1117] p-3">
                     <img src={stat.url} alt={stat.alt} className="w-full h-auto" loading="lazy" />
                   </div>
                 </CardContent>
@@ -56,14 +56,14 @@ const GitHubStats = () => {
           ))}
         </div>
 
-        <ScrollReveal className="mt-10 text-center">
+        <ScrollReveal className="mt-8 text-center">
           <a
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl btn-glow"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl btn-glow text-sm"
           >
-            <Github className="h-5 w-5" />
+            <Github className="h-4 w-4" />
             View Full GitHub Profile
           </a>
         </ScrollReveal>

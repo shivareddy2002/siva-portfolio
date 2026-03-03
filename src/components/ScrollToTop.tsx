@@ -7,38 +7,31 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.pageYOffset > 300);
     };
-
-    window.addEventListener("scroll", toggleVisibility);
-
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <>
-      {isVisible && (
-        <Button
-          onClick={scrollToTop}
-          size="icon"
-          className="fixed bottom-8 right-8 z-40 h-12 w-12 rounded-full bg-gradient-to-r from-primary to-secondary shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-fade-in"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp className="h-6 w-6" />
-        </Button>
-      )}
-    </>
+    <Button
+      onClick={scrollToTop}
+      size="icon"
+      className="fixed bottom-8 right-8 z-40 h-12 w-12 rounded-full bg-gradient-to-r from-primary to-secondary shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-500"
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0) scale(1)" : "translateY(16px) scale(0.8)",
+        pointerEvents: isVisible ? "auto" : "none",
+        transition: "opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
+      }}
+      aria-label="Scroll to top"
+    >
+      <ArrowUp className="h-5 w-5" />
+    </Button>
   );
 };
 

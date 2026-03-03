@@ -43,15 +43,15 @@ const Internships = () => {
               <Card className="group card-lift border hover:border-primary/30">
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
                       <Briefcase className="h-6 w-6" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <CardTitle className="text-xl md:text-2xl font-heading group-hover:text-primary transition-colors duration-300">
                         {internship.role}
                       </CardTitle>
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-2">
-                        <p className="text-lg font-semibold text-foreground">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mt-2">
+                        <p className="text-base sm:text-lg font-semibold text-foreground">
                           {internship.company}, {internship.location}
                         </p>
                         <span className="hidden sm:inline text-muted-foreground">•</span>
@@ -61,11 +61,11 @@ const Internships = () => {
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-sm md:text-base mt-4 pl-[60px]">
+                  <CardDescription className="text-sm md:text-base mt-4 pl-0 md:pl-[60px]">
                     {internship.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6 pl-[60px]">
+                <CardContent className="space-y-6 pl-6 md:pl-[60px]">
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
                     <ul className="space-y-2.5 text-muted-foreground">
@@ -91,7 +91,7 @@ const Internships = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="flex gap-3 pt-2">
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
                     <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
                       <a href={internship.github} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
