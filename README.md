@@ -1,12 +1,11 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff4b4b,100:f9c74f&height=180&section=header&text=Lomada%20Siva%20Gangi%20Reddy%20-%20Portfolio%20Website&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff4b4b,100:f9c74f&height=180&section=header&text=Lomada%20Siva%20Gangi%20Reddy%20-%20Portfolio&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
 </p>
-
 
 Welcome to my personal portfolio!  
 This website highlights my journey as an **Aspiring Data Scientist**, showcasing my **skills, projects, and certifications** in the fields of **Python, SQL, Machine Learning, Deep Learning, NLP, Power BI, and Data Visualization**.
 
-🌐 **Live Website:** [lsgr-portfolio-pulse.lovable.app](https://lsgr-portfolio-pulse.lovable.app/)  
+🌐 **Live Website:** (https://lsgr-portfolio-pulse.vercel.app/)  
 
 ---
 
@@ -30,14 +29,13 @@ It serves as a **digital resume** and a central hub for all my work, including p
 ## 🧠 My Skills  
 
 **Programming:** Python, Java, SQL, C  
-**Data Science:** Pandas, NumPy, Scikit-learn, Keras, TensorFlow  
-**Visualization:** Power BI, Matplotlib, Seaborn, Excel  
-**Tools:** Git, Jupyter Notebook, Vercel, Flask, Streamlit   
+**Data Science:** Pandas, NumPy, Scikit-learn, TensorFlow, NLTK, 
+**Visualization:** Power BI, Matplotlib, Seaborn, Excel
+**Tools:** Git, Jupyter Notebook, Vercel, Flask, Streamlit, VS Code 
 
 ---
 
 ## 🏗️ Featured Projects  
-
 
 <p align="center">
 
@@ -82,9 +80,7 @@ It serves as a **digital resume** and a central hub for all my work, including p
 
 </p>
 
-
 ---
-
 
 ## 🏅 Certifications  
 
