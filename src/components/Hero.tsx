@@ -170,7 +170,7 @@ const Hero = () => {
   const [showContent, setShowContent] = useState(false);
 
   const fullText =
-    "Data Engineering Intern @ Boolean Data Systems\nAspiring Data Scientist / Data Engineer | Python, SQL, ML, DL, NLP | Power BI, Excel";
+    "Data Engineering Intern @ Boolean Data Systems\nAspiring Data Scientist / Data Engineer | Python, SQL, ML, DL, NLP, Power BI";
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 300);
