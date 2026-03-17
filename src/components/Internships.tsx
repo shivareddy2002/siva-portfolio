@@ -48,7 +48,7 @@ const Internships = () => {
           </h2>
           <div className="section-divider" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hands-on industry experience in data science and AI development
+            Hands-on industry experience in data engineering, data science, and AI development
           </p>
         </ScrollReveal>
 
