@@ -7,8 +7,7 @@ import profileImage from "@/assets/profile.png";
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const [showContent, setShowContent] = useState(false);
-  const fullText = "Aspiring Data Scientist | Python, SQL, ML, DL, NLP | Power BI, Excel";
-  
+  const fullText = "Data Engineering Intern @ Boolean Data Systems\nAspiring Data Scientist / Data Engineer | Python, SQL, ML, DL, NLP | Power BI, Excel";  
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 300);
     return () => clearTimeout(timer);

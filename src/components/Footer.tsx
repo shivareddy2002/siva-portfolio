@@ -14,6 +14,7 @@ const Footer = () => {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
+    { href: "#publications", label: "Certifications" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -30,19 +31,26 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-heading font-bold gradient-text mb-2">LSGR</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
+              Data Engineering Intern @ Boolean Data Systems
               Aspiring Data Scientist passionate about transforming data into actionable insights through ML, DL & NLP.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-3">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-3">
+              Quick Links
+            </h4>
+
+            <ul className="grid grid-cols-3 gap-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo(link.href);
+                    }}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
@@ -51,7 +59,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
           {/* Social */}
           <div>
             <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-3">Connect</h4>
@@ -77,9 +84,9 @@ const Footer = () => {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground">
+          {/* <p className="text-xs text-muted-foreground">
             Built with React & Tailwind CSS
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
