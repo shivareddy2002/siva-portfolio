@@ -29,36 +29,36 @@ const Projects = () => {
     },
     {
       title: "Zomato Data Analysis Dashboard",
-      description: "Analyzed restaurant dataset to identify patterns in ratings, food types, and pricing. Built visualizations for customer preferences and restaurant performance evaluation.",
-      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "Streamlit"],
+      description: "Analyzed restaurant dataset to identify patterns in ratings, food types, and pricing with interactive visualizations.",
+      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Streamlit"],
       github: "https://github.com/shivareddy2002/Zomato-Data-Analysis-Dashboard",
       demo: "https://zomato-data-analysis-dashboard.streamlit.app/",
     },
     {
       title: "AutoPredict Pro - Car Price Prediction",
-      description: "End-to-end ML & DL web app predicting used car market value using mileage, year, fuel type, engine power, ownership history, and brand value with dual-model approach.",
-      tech: ["Python", "Scikit-learn", "TensorFlow", "Keras", "Pandas", "NumPy", "Streamlit"],
+      description: "End-to-end ML & DL web app predicting used car market value using multiple features with dual-model approach.",
+      tech: ["Python", "Scikit-learn", "TensorFlow", "Keras", "Streamlit"],
       github: "https://github.com/shivareddy2002/AutoPredictPro",
       demo: "https://autopredictpro.streamlit.app/",
     },
     {
       title: "Credit Card Transaction Dashboard",
-      description: "Interactive Power BI dashboard for credit card analytics with SQL database, DAX measures for KPIs, and time intelligence providing weekly, quarterly, and YTD insights.",
-      tech: ["Power BI", "SQL", "DAX", "Data Modeling", "Data Visualization"],
+      description: "Interactive Power BI dashboard for credit card analytics with SQL database, DAX measures for KPIs.",
+      tech: ["Power BI", "SQL", "DAX", "Data Modeling"],
       github: "https://github.com/shivareddy2002/Credit_Card_Transaction_Report",
       demo: "https://drive.google.com/drive/folders/16T65EOoXPGIZTcLpNTc-AbGHeKpTW9zG?usp=sharing",
     },
     {
       title: "Stroke Detection",
-      description: "Deep learning web app predicting stroke type from CT and MRI scans using CNN + BiGRU hybrid modeling with interactive visualization.",
-      tech: ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "Plotly", "Scikit-learn", "Vercel"],
+      description: "Deep learning web app predicting stroke type from CT and MRI scans using CNN + BiGRU hybrid modeling.",
+      tech: ["Python", "TensorFlow", "Keras", "OpenCV", "Flask", "Vercel"],
       github: "https://github.com/shivareddy2002/stroke-detection",
       demo: "https://stroke-detection.vercel.app/",
     },
     {
       title: "Emotion Detection",
       description: "NLP emotion detection app classifying six human emotions from text using BiLSTM with confidence-based predictions.",
-      tech: ["Python", "TensorFlow", "Keras", "NLP", "Scikit-learn", "Flask", "Bootstrap", "Vercel"],
+      tech: ["Python", "TensorFlow", "Keras", "NLP", "Flask", "Vercel"],
       github: "https://github.com/shivareddy2002/Emotion-AI",
       demo: "https://emotion-ai-tan.vercel.app/",
     },
@@ -77,46 +77,46 @@ const Projects = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 0.05}>
+            <ScrollReveal key={index} delay={index * 0.04}>
               <Card className="group h-full flex flex-col card-lift border hover:border-primary/30 overflow-hidden">
                 <div className="h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <CardHeader className="flex-1 pb-3">
-                  <CardTitle className="text-base md:text-lg font-heading group-hover:text-primary transition-colors duration-300 leading-snug">
+                <CardHeader className="flex-1 p-4 pb-2">
+                  <CardTitle className="text-sm md:text-base font-heading group-hover:text-primary transition-colors duration-300 leading-snug">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-xs md:text-sm mt-2 leading-relaxed line-clamp-3">
+                  <CardDescription className="text-xs mt-1.5 leading-relaxed line-clamp-3">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3 pt-0">
+                <CardContent className="space-y-3 p-4 pt-0">
                   <div className="flex flex-wrap gap-1">
-                    {project.tech.slice(0, 5).map((tech, techIndex) => (
+                    {project.tech.slice(0, 4).map((tech, techIndex) => (
                       <Badge
                         key={techIndex}
                         variant="secondary"
-                        className="text-[10px] px-2 py-0.5 bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 transition-colors duration-300"
+                        className="text-[10px] px-1.5 py-0.5 bg-gradient-to-r from-primary/10 to-secondary/10 hover:from-primary/20 hover:to-secondary/20 transition-colors duration-300"
                       >
                         {tech}
                       </Badge>
                     ))}
-                    {project.tech.length > 5 && (
-                      <Badge variant="secondary" className="text-[10px] px-2 py-0.5">
-                        +{project.tech.length - 5}
+                    {project.tech.length > 4 && (
+                      <Badge variant="secondary" className="text-[10px] px-1.5 py-0.5">
+                        +{project.tech.length - 4}
                       </Badge>
                     )}
                   </div>
-                  <div className="flex gap-2 pt-1">
+                  <div className="flex gap-2">
                     <Button variant="outline" size="sm" className="flex-1 text-xs h-8 hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-3.5 w-3.5 mr-1.5" />
+                        <Github className="h-3.5 w-3.5 mr-1" />
                         Code
                       </a>
                     </Button>
                     <Button variant="default" size="sm" className="flex-1 text-xs h-8 bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
                       <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                        <ExternalLink className="h-3.5 w-3.5 mr-1" />
                         Demo
                       </a>
                     </Button>

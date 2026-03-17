@@ -15,7 +15,7 @@ const CoreCompetencies = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
@@ -27,7 +27,7 @@ const CoreCompetencies = () => {
         <ScrollReveal>
           <Card className="border">
             <CardContent className="p-6 md:p-10">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {competencies.map((skill, index) => (
                   <ProgressBar key={index} name={skill.name} level={skill.level} index={index} />
                 ))}
@@ -44,25 +44,25 @@ const ProgressBar = ({ name, level, index }: { name: string; level: number; inde
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <div ref={ref} className="space-y-2.5">
+    <div ref={ref} className="space-y-2">
       <div className="flex justify-between items-center">
-        <span className="font-medium text-sm md:text-base">{name}</span>
+        <span className="font-medium text-sm">{name}</span>
         <span
           className="text-sm font-semibold text-primary tabular-nums"
           style={{
             opacity: isVisible ? 1 : 0,
-            transition: `opacity 0.6s ease ${index * 0.15 + 0.4}s`,
+            transition: `opacity 0.5s ease ${index * 0.1 + 0.3}s`,
           }}
         >
           {level}%
         </span>
       </div>
-      <div className="w-full h-2.5 bg-muted rounded-full overflow-hidden">
+      <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
         <div
           className="h-full bg-gradient-to-r from-primary to-secondary rounded-full relative"
           style={{
             width: isVisible ? `${level}%` : "0%",
-            transition: `width 1.4s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.12}s`,
+            transition: `width 1.2s cubic-bezier(0.16, 1, 0.3, 1) ${index * 0.08}s`,
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer bg-[length:200%_100%] rounded-full" />

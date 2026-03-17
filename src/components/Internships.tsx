@@ -52,13 +52,14 @@ const Internships = () => {
           </p>
         </ScrollReveal>
 
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto space-y-6">
           {internships.map((internship, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <Card className="group card-lift border hover:border-primary/30">
+              <Card className="group card-lift border hover:border-primary/30 overflow-hidden">
+                <div className="h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mt-0.5">
                       <Briefcase className="h-6 w-6" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -70,31 +71,31 @@ const Internships = () => {
                           {internship.company}, {internship.location}
                         </p>
                         <span className="hidden sm:inline text-muted-foreground">•</span>
-                        <p className="text-sm text-muted-foreground">
+                        <Badge variant="secondary" className="w-fit text-xs">
                           {internship.period}
-                        </p>
+                        </Badge>
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-sm md:text-base mt-4 pl-0 md:pl-[60px]">
+                  <CardDescription className="text-sm md:text-base mt-4 ml-0 md:ml-[60px]">
                     {internship.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6 pl-6 md:pl-[60px]">
+                <CardContent className="space-y-5 ml-0 md:ml-[60px]">
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Key Achievements:</h4>
-                    <ul className="space-y-2.5 text-muted-foreground">
+                    <h4 className="font-semibold text-foreground mb-3 text-sm">Key Achievements:</h4>
+                    <ul className="space-y-2 text-muted-foreground">
                       {internship.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex gap-2.5">
-                          <span className="text-primary mt-1 flex-shrink-0">◦</span>
+                        <li key={idx} className="flex gap-2.5 items-start">
+                          <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-primary to-secondary mt-2 flex-shrink-0" />
                           <span className="text-sm md:text-base leading-relaxed">{achievement}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
-                    <div className="flex flex-wrap gap-2">
+                    <h4 className="font-semibold text-foreground mb-3 text-sm">Technologies Used:</h4>
+                    <div className="flex flex-wrap gap-1.5">
                       {internship.tech.map((tech, techIndex) => (
                         <Badge
                           key={techIndex}
@@ -106,7 +107,7 @@ const Internships = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <div className="flex flex-wrap gap-2.5 pt-1">
                     {internship.github && (
                       <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
                         <a href={internship.github} target="_blank" rel="noopener noreferrer">
