@@ -169,17 +169,14 @@ const Hero = () => {
   const [typedText, setTypedText] = useState("");
   const [showContent, setShowContent] = useState(false);
 
-  // ✅ Two-line text using \n
   const fullText =
     "Data Engineering Intern @ Boolean Data Systems\nAspiring Data Scientist / Data Engineer | Python, SQL, ML, DL, NLP | Power BI, Excel";
 
-  // Show animation
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 300);
     return () => clearTimeout(timer);
   }, []);
 
-  // Typing animation
   useEffect(() => {
     if (!showContent) return;
 
@@ -201,7 +198,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-24 overflow-hidden"
       style={{ background: "var(--gradient-hero)" }}
     >
       {/* Background */}
@@ -215,8 +212,9 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
-        <div className="flex flex-col items-center text-center space-y-6">
-          
+        {/* ✅ increased spacing */}
+        <div className="flex flex-col items-center text-center space-y-8">
+
           {/* Avatar */}
           <div
             style={{
@@ -229,10 +227,7 @@ const Hero = () => {
             }}
           >
             <Avatar className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 border-4 border-primary/20 shadow-xl ring-4 ring-primary/5">
-              <AvatarImage
-                src={profileImage}
-                alt="Lomada Siva Gangi Reddy"
-              />
+              <AvatarImage src={profileImage} alt="Lomada Siva Gangi Reddy" />
               <AvatarFallback className="text-4xl font-heading bg-gradient-to-br from-primary to-secondary text-white">
                 LSGR
               </AvatarFallback>
@@ -241,7 +236,7 @@ const Hero = () => {
 
           {/* Name + Typing */}
           <div
-            className="space-y-3"
+            className="space-y-4"
             style={{
               opacity: showContent ? 1 : 0,
               transform: showContent
@@ -251,22 +246,23 @@ const Hero = () => {
               transition: `all 1s ${easing} 0.15s`,
             }}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-foreground tracking-tight leading-[1.1]">
+            {/* ✅ FIXED font size (no overflow) */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-tight leading-tight">
               Lomada Siva Gangi Reddy
             </h1>
 
-            {/* ✅ FIXED: whitespace-pre-line added */}
-            <div className="h-10 flex items-center justify-center">
-              <p className="text-sm sm:text-base md:text-lg font-medium text-muted-foreground whitespace-pre-line leading-relaxed text-center max-w-xl">
+            {/* ✅ FIXED typing block */}
+            <div className="min-h-[60px] flex items-center justify-center">
+              <p className="text-sm sm:text-base md:text-lg font-medium text-muted-foreground whitespace-pre-line leading-relaxed text-center max-w-2xl">
                 {typedText}
-                <span className="inline-block w-0.5 h-5 sm:h-6 bg-primary ml-1 animate-blink align-middle" />
+                <span className="inline-block w-[2px] h-5 sm:h-6 bg-primary ml-1 animate-blink align-middle" />
               </p>
             </div>
           </div>
 
           {/* Buttons */}
           <div
-            className="flex flex-col sm:flex-row gap-3 pt-2"
+            className="flex flex-col sm:flex-row gap-4 pt-4"
             style={{
               opacity: showContent ? 1 : 0,
               transform: showContent
@@ -306,7 +302,7 @@ const Hero = () => {
 
           {/* Social */}
           <div
-            className="flex gap-3 pt-2"
+            className="flex gap-4 pt-2"
             style={{
               opacity: showContent ? 1 : 0,
               transform: showContent
@@ -322,11 +318,7 @@ const Hero = () => {
               className="h-11 w-11 rounded-full border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               asChild
             >
-              <a
-                href="https://www.linkedin.com/in/lomada-siva-gangi-reddy-a64197280/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.linkedin.com/in/lomada-siva-gangi-reddy-a64197280/" target="_blank">
                 <Linkedin className="h-5 w-5" />
               </a>
             </Button>
@@ -337,15 +329,12 @@ const Hero = () => {
               className="h-11 w-11 rounded-full border-2 hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300"
               asChild
             >
-              <a
-                href="https://github.com/shivareddy2002"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com/shivareddy2002" target="_blank">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
           </div>
+
         </div>
       </div>
     </section>
