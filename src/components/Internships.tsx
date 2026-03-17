@@ -7,10 +7,25 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Internships = () => {
   const internships = [
     {
+      role: "Data Engineering Intern",
+      company: "Boolean Data Private Limited",
+      location: "Remote",
+      period: "Mar 2026 – Present",
+      description: "Working on scalable data pipelines, ETL workflows, data migration, and performance optimization using Snowflake.",
+      project: "Data Engineering",
+      achievements: [
+        "Building scalable data pipelines for real-world data problems.",
+        "Developing ETL and data processing workflows across systems.",
+        "Performing data migration and optimizing performance using Snowflake features.",
+      ],
+      tech: ["Snowflake", "SQL", "Python", "ETL", "Data Pipelines", "Data Migration", "Data Engineering"],
+      website: "https://booleandata.ai/",
+    },
+    {
       role: "Data Science Intern",
       company: "CeduraTech",
-      location: "Hyderabad",  
-      period: "Oct 2025 – Dec 2025",
+      location: "Hyderabad",
+      period: "Oct 2025 – Feb 2026",
       description: "Worked on Text Generation using GRU, applying deep learning techniques and natural language processing.",
       project: "Text Generation Model",
       achievements: [
@@ -18,7 +33,7 @@ const Internships = () => {
         "Developed and trained a GRU-based neural network using TensorFlow and Keras to generate coherent text.",
         "Deployed the trained model as an interactive web app using Streamlit, demonstrating end-to-end project execution.",
       ],
-      tech: ["Python","Deep Learning", "GRU", "RNN", "NLP", "Tokenization","Data Cleaning", "Streamlit", "TensorFlow", "Keras"],
+      tech: ["Python", "Deep Learning", "GRU", "RNN", "NLP", "Tokenization", "Data Cleaning", "Streamlit", "TensorFlow", "Keras"],
       github: "https://github.com/shivareddy2002/GRU-Text-Generation",
       demo: "https://text-generation-using-gru-model.streamlit.app/",
     },
