@@ -7,10 +7,25 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Internships = () => {
   const internships = [
     {
+      role: "Data Engineering Intern",
+      company: "Boolean Data Private Limited",
+      location: "Remote",
+      period: "Mar 2026 – Present",
+      description: "Working on scalable data pipelines, ETL workflows, data migration, and performance optimization using Snowflake.",
+      project: "Data Engineering",
+      achievements: [
+        "Building scalable data pipelines for real-world data problems.",
+        "Developing ETL and data processing workflows across systems.",
+        "Performing data migration and optimizing performance using Snowflake features.",
+      ],
+      tech: ["Snowflake", "SQL", "Python", "ETL", "Data Pipelines", "Data Migration", "Data Engineering"],
+      website: "https://booleandata.ai/",
+    },
+    {
       role: "Data Science Intern",
       company: "CeduraTech",
-      location: "Hyderabad",  
-      period: "Oct 2025 – Dec 2025",
+      location: "Hyderabad",
+      period: "Oct 2025 – Feb 2026",
       description: "Worked on Text Generation using GRU, applying deep learning techniques and natural language processing.",
       project: "Text Generation Model",
       achievements: [
@@ -18,7 +33,7 @@ const Internships = () => {
         "Developed and trained a GRU-based neural network using TensorFlow and Keras to generate coherent text.",
         "Deployed the trained model as an interactive web app using Streamlit, demonstrating end-to-end project execution.",
       ],
-      tech: ["Python","Deep Learning", "GRU", "RNN", "NLP", "Tokenization","Data Cleaning", "Streamlit", "TensorFlow", "Keras"],
+      tech: ["Python", "Deep Learning", "GRU", "RNN", "NLP", "Tokenization", "Data Cleaning", "Streamlit", "TensorFlow", "Keras"],
       github: "https://github.com/shivareddy2002/GRU-Text-Generation",
       demo: "https://text-generation-using-gru-model.streamlit.app/",
     },
@@ -33,7 +48,7 @@ const Internships = () => {
           </h2>
           <div className="section-divider" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Hands-on industry experience in data science and AI development
+            Hands-on industry experience in data engineering, data science, and AI development
           </p>
         </ScrollReveal>
 
@@ -92,18 +107,30 @@ const Internships = () => {
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                    <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                      <a href={internship.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        View Code
-                      </a>
-                    </Button>
-                    <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
-                      <a href={internship.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {internship.github && (
+                      <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                        <a href={internship.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          View Code
+                        </a>
+                      </Button>
+                    )}
+                    {internship.demo && (
+                      <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
+                        <a href={internship.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
+                    {internship.website && (
+                      <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
+                        <a href={internship.website} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Company Website
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
