@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const GitHubStats = () => {
   const username = "shivareddy2002";
-  
+
   const stats = [
     {
       title: "Profile Stats",
@@ -39,16 +39,21 @@ const GitHubStats = () => {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
           {stats.map((stat, index) => (
             <ScrollReveal key={index} delay={index * 0.08}>
               <Card className="group h-full card-lift border overflow-hidden">
-                <CardContent className="p-4 md:p-5">
+                <CardContent className="p-4 md:p-5 flex flex-col h-full">
                   <h3 className="text-sm font-heading font-semibold mb-3 text-center group-hover:text-primary transition-colors duration-300">
                     {stat.title}
                   </h3>
-                  <div className="relative rounded-lg overflow-hidden bg-[#0D1117] p-3">
-                    <img src={stat.url} alt={stat.alt} className="w-full h-auto" loading="lazy" />
+                  <div className="relative rounded-lg overflow-hidden bg-[hsl(222,30%,8%)] flex-1 flex items-center justify-center p-2 min-h-[160px]">
+                    <img
+                      src={stat.url}
+                      alt={stat.alt}
+                      className="w-full h-auto max-h-[200px] object-contain"
+                      loading="lazy"
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -61,7 +66,7 @@ const GitHubStats = () => {
             href={`https://github.com/${username}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl btn-glow text-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold rounded-xl hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl btn-glow text-sm"
           >
             <Github className="h-4 w-4" />
             View Full GitHub Profile
