@@ -107,18 +107,30 @@ const Internships = () => {
                     </div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                    <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                      <a href={internship.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        View Code
-                      </a>
-                    </Button>
-                    <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
-                      <a href={internship.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {internship.github && (
+                      <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                        <a href={internship.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-4 w-4 mr-2" />
+                          View Code
+                        </a>
+                      </Button>
+                    )}
+                    {internship.demo && (
+                      <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
+                        <a href={internship.demo} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
+                    {internship.website && (
+                      <Button variant="default" size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300" asChild>
+                        <a href={internship.website} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Company Website
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
