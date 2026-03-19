@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, MessageCircle, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Footer = () => {
