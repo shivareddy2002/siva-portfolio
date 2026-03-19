@@ -65,7 +65,7 @@ const Hero = () => {
             }}
           >
             <div className="relative">
-              <Avatar className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10">
+              <Avatar className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10 [&>img]:object-cover [&>img]:object-top">
                 <AvatarImage src={profileImage} alt="Lomada Siva Gangi Reddy" className="object-cover" />
                 <AvatarFallback className="text-4xl font-heading bg-gradient-to-br from-primary to-secondary text-white">
                   LSGR
