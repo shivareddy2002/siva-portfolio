@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MessageCircle, ArrowUp } from "lucide-react";
+import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Footer = () => {
   const socialLinks = [
@@ -24,70 +25,83 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 border-t border-border bg-card">
+    <footer className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 border-t border-border bg-card">
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-10">
           {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-heading font-bold gradient-text mb-2">LSGR</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Data Engineering Intern @ Boolean Data Systems
-              Aspiring Data Scientist passionate about transforming data into actionable insights through ML, DL & NLP.
-            </p>
-          </div>
+          <ScrollReveal direction="left" delay={0}>
+            <div>
+              <h3 className="text-2xl font-heading font-bold gradient-text mb-3">LSGR</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
+                Data Engineering Intern @ Boolean Data Systems.
+                Aspiring Data Scientist passionate about transforming data into actionable insights through ML, DL & NLP.
+              </p>
+            </div>
+          </ScrollReveal>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-3">
-              Quick Links
-            </h4>
-
-            <ul className="grid grid-cols-3 gap-2">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollTo(link.href);
-                    }}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* Social */}
-          <div>
-            <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-3">Connect</h4>
-            <div className="flex items-center gap-2.5">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target={link.external ? "_blank" : undefined}
-                  rel={link.external ? "noopener noreferrer" : undefined}
-                  className="w-9 h-9 rounded-full border border-border hover:border-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300"
-                  aria-label={link.label}
-                >
-                  {link.icon}
-                </a>
-              ))}
+          <ScrollReveal direction="none" delay={0.08}>
+            <div>
+              <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-4">
+                Quick Links
+              </h4>
+              <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+                {quickLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo(link.href);
+                      }}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 inline-flex items-center gap-1.5 group"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-150 transition-all duration-300" />
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          </ScrollReveal>
+
+          {/* Social */}
+          <ScrollReveal direction="right" delay={0.16}>
+            <div>
+              <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-4">Connect</h4>
+              <div className="flex items-center gap-2.5 flex-wrap">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                    className="w-10 h-10 rounded-full border border-border hover:border-primary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300"
+                    aria-label={link.label}
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
 
         {/* Divider & Copyright */}
-        <div className="border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
-          </p>
-          {/* <p className="text-xs text-muted-foreground">
-            Built with React & Tailwind CSS
-          </p> */}
-        </div>
+        <ScrollReveal delay={0.2}>
+          <div className="border-t border-border pt-7 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
+            </p>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-300 group"
+            >
+              Back to top
+              <ArrowUp className="h-3.5 w-3.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+            </button>
+          </div>
+        </ScrollReveal>
       </div>
     </footer>
   );
