@@ -90,7 +90,7 @@
     scroll-behavior: smooth;
   }
 
-  /* Only transition color-related properties for theme switch — NOT all properties */
+  /* Theme toggle transition — scoped, not global */
   html.transitioning,
   html.transitioning * {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.15s ease, box-shadow 0.3s ease !important;
@@ -103,6 +103,12 @@
 
   p, li {
     @apply leading-relaxed;
+  }
+
+  /* Global selection color */
+  ::selection {
+    background: hsl(var(--primary) / 0.2);
+    color: hsl(var(--foreground));
   }
 }
 
@@ -163,5 +169,10 @@
   }
   .btn-glow:hover::after {
     opacity: 0.35;
+  }
+
+  /* Focus ring for accessibility */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
   }
 }
