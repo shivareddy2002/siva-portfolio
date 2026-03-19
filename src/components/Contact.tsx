@@ -55,7 +55,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="contact" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-7xl">
         <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-4">
