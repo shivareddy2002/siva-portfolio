@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, MessageCircle, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MessageCircle } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Footer = () => {
@@ -89,17 +89,10 @@ const Footer = () => {
 
         {/* Divider & Copyright */}
         <ScrollReveal delay={0.2}>
-          <div className="border-t border-border pt-7 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="border-t border-border pt-7 flex items-center justify-center">
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
             </p>
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors duration-300 group"
-            >
-              Back to top
-              <ArrowUp className="h-3.5 w-3.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-            </button>
           </div>
         </ScrollReveal>
       </div>
