@@ -65,11 +65,11 @@ const Hero = () => {
             }}
           >
             <div className="relative">
-              <div className="w-40 h-52 sm:w-48 sm:h-64 md:w-56 md:h-72 rounded-2xl border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10 overflow-hidden">
-                <img src={profileImage} alt="Lomada Siva Gangi Reddy" className="w-full h-full object-cover object-top" />
+              <div className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10 overflow-hidden">
+                <img src={profileImage} alt="Lomada Siva Gangi Reddy" className="w-full h-full object-cover object-top scale-[1.15]" />
               </div>
               {/* Pulse ring */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-primary/20 animate-ping" style={{ animationDuration: "3s" }} />
+              <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping" style={{ animationDuration: "3s" }} />
             </div>
           </div>
 
