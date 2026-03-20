@@ -65,11 +65,12 @@ const Hero = () => {
             }}
           >
             <div className="relative">
-<div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10 overflow-hidden">
+<div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10 overflow-hidden flex items-center justify-center">
   <img 
     src={profileImage} 
     alt="Lomada Siva Gangi Reddy" 
-    className="w-full h-full object-contain" 
+    className="w-full h-full object-cover scale-90"
+    style={{ objectPosition: '50% 20%' }}
   />
 </div>
               {/* Pulse ring */}
