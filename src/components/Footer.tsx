@@ -25,27 +25,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 border-t border-border bg-card">
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 mb-10">
-          {/* Brand */}
-          <ScrollReveal direction="left" delay={0}>
+    <footer className="py-10 md:py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-card/80">
+      <div className="container mx-auto max-w-6xl">
+        <ScrollReveal delay={0}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 items-start">
+            {/* Brand */}
             <div>
-              <h3 className="text-2xl font-heading font-bold gradient-text mb-3">LSGR</h3>
+              <h3 className="text-xl font-heading font-bold gradient-text mb-2">LSGR</h3>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-                Data Engineering Intern @ Boolean Data Systems.
-                Aspiring Data Scientist passionate about transforming data into actionable insights through ML, DL & NLP.
+                Data Engineering Intern @ Boolean Data Systems. Aspiring Data Scientist passionate about ML, DL & NLP.
               </p>
             </div>
-          </ScrollReveal>
 
-          {/* Quick Links */}
-          <ScrollReveal direction="none" delay={0.08}>
+            {/* Quick Links */}
             <div>
-              <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-4">
+              <h4 className="text-xs font-heading font-semibold text-foreground uppercase tracking-widest mb-3">
                 Quick Links
               </h4>
-              <ul className="grid grid-cols-2 gap-x-6 gap-y-2.5">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
                     <a
@@ -54,29 +51,27 @@ const Footer = () => {
                         e.preventDefault();
                         scrollTo(link.href);
                       }}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300 inline-flex items-center gap-1.5 group"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 inline-flex items-center gap-1.5 group"
                     >
-                      <span className="w-1 h-1 rounded-full bg-primary/40 group-hover:bg-primary group-hover:scale-150 transition-all duration-300" />
+                      <span className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-150 transition-all duration-200" />
                       {link.label}
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
-          </ScrollReveal>
 
-          {/* Social */}
-          <ScrollReveal direction="right" delay={0.16}>
+            {/* Social */}
             <div>
-              <h4 className="text-sm font-heading font-semibold text-foreground uppercase tracking-wider mb-4">Connect</h4>
-              <div className="flex items-center gap-2.5 flex-wrap">
+              <h4 className="text-xs font-heading font-semibold text-foreground uppercase tracking-widest mb-3">Connect</h4>
+              <div className="flex items-center gap-2 flex-wrap">
                 {socialLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="w-10 h-10 rounded-full border border-border hover:border-primary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 rounded-full border border-border hover:border-primary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground active:scale-95 transition-all duration-200"
                     aria-label={link.label}
                   >
                     {link.icon}
@@ -84,17 +79,15 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-          </ScrollReveal>
-        </div>
-
-        {/* Divider & Copyright */}
-        <ScrollReveal delay={0.2}>
-          <div className="border-t border-border pt-7 flex items-center justify-center">
-            <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
-            </p>
           </div>
         </ScrollReveal>
+
+        {/* Divider & Copyright */}
+        <div className="border-t border-border mt-8 pt-6 flex items-center justify-center">
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
