@@ -48,8 +48,11 @@ const About = () => {
                     Professional Summary
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-[1.85]">
-                    Aspiring Data Scientist with hands-on experience in Machine Learning, Deep Learning, and NLP, passionate about transforming raw data into actionable insights. Skilled in Python, TensorFlow, Streamlit, and advanced data visualization tools like Power BI and Excel. Experienced in building and deploying real-world AI applications, analyzing complex datasets, and generating strategic recommendations. Dedicated to continuous learning, exploring innovative approaches in AI and data science, and solving challenging problems through data-driven solutions. Committed to contributing to impactful projects that drive decision-making, optimize processes, and support business growth. Eager to apply analytical and AI expertise in real-world business and research challenges.
-                  </p>
+Aspiring Data Engineer and Data Scientist with hands-on experience in building scalable data pipelines and transforming raw data into actionable insights. Currently working as a Data Engineering Intern, gaining practical experience in Snowflake, SQL, Python, and ETL processes, with a focus on data migration, pipeline optimization, and data warehousing.
+
+Skilled in Python, SQL, Machine Learning, Deep Learning, and NLP, with experience in developing and deploying data-driven applications using tools like TensorFlow, Streamlit, Power BI, and Excel. Strong understanding of data modeling, data cleaning, and analytical problem-solving, enabling efficient handling of large and complex datasets.
+
+Passionate about designing efficient data architectures, improving data quality, and supporting business decision-making through reliable data solutions. Committed to continuous learning and exploring modern data engineering and AI technologies to solve real-world challenges and contribute to impactful projects.                  </p>
                 </div>
               </ScrollReveal>
 
