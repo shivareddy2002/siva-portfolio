@@ -58,7 +58,7 @@ const Skills = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {skillCategories.map((category, index) => (
-            <ScrollReveal key={index} delay={index * 0.06}>
+            <ScrollReveal key={index} delay={index * 0.07} direction={index % 3 === 0 ? "left" : index % 3 === 1 ? "up" : "right"}>
               <Card className="group h-full card-lift border overflow-hidden">
                 <div className={`h-1 bg-gradient-to-r ${category.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                 <CardContent className="p-6 md:p-8">

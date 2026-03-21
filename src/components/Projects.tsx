@@ -79,7 +79,7 @@ const Projects = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 0.04}>
+            <ScrollReveal key={index} delay={index * 0.05} direction={index % 2 === 0 ? "up" : "scale"}>
               <Card className="group h-full flex flex-col card-lift border hover:border-primary/30 overflow-hidden">
                 <div className="h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="flex-1 p-4 pb-2">

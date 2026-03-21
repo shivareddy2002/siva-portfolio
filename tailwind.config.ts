@@ -73,58 +73,74 @@ export default {
           to: { height: "0" },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(20px)", filter: "blur(4px)" },
-          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" }
+          "0%": { opacity: "0", transform: "translateY(24px)", filter: "blur(6px)" },
+          "100%": { opacity: "1", transform: "translateY(0)", filter: "blur(0)" },
         },
         "slide-in": {
-          "0%": { opacity: "0", transform: "translateX(-20px)", filter: "blur(4px)" },
-          "100%": { opacity: "1", transform: "translateX(0)", filter: "blur(0)" }
+          "0%": { opacity: "0", transform: "translateX(-24px)", filter: "blur(6px)" },
+          "100%": { opacity: "1", transform: "translateX(0)", filter: "blur(0)" },
         },
         "typing": {
           "0%": { width: "0" },
-          "100%": { width: "100%" }
+          "100%": { width: "100%" },
         },
         "blink": {
           "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0" }
+          "50%": { opacity: "0" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px) scale(1)" },
-          "50%": { transform: "translateY(-16px) scale(1.02)" }
+          "50%": { transform: "translateY(-20px) scale(1.03)" },
         },
         "pulse-slow": {
           "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.85" }
+          "50%": { opacity: "0.8" },
         },
         "progress-fill": {
           "0%": { width: "0%" },
-          "100%": { width: "var(--target-width)" }
+          "100%": { width: "var(--target-width)" },
         },
         "shimmer": {
           "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" }
+          "100%": { backgroundPosition: "200% 0" },
         },
         "scale-up": {
-          "0%": { transform: "scale(0.95)", opacity: "0" },
-          "100%": { transform: "scale(1)", opacity: "1" }
+          "0%": { transform: "scale(0.9)", opacity: "0", filter: "blur(6px)" },
+          "100%": { transform: "scale(1)", opacity: "1", filter: "blur(0)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.15)" },
+          "50%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.3)" },
+        },
+        "gradient-shift": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+        "slide-up-fade": {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both",
-        "slide-in": "slide-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "fade-in": "fade-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "slide-in": "slide-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) both",
         "typing": "typing 3.5s steps(40, end)",
         "blink": "blink 1s ease-in-out infinite",
-        "float": "float 5s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
         "pulse-slow": "pulse-slow 3s ease-in-out infinite",
-        "progress-fill": "progress-fill 1.2s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "progress-fill": "progress-fill 1.4s cubic-bezier(0.16, 1, 0.3, 1) both",
         "shimmer": "shimmer 2s linear infinite",
-        "scale-up": "scale-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "scale-up": "scale-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "gradient-shift": "gradient-shift 4s ease infinite",
+        "slide-up-fade": "slide-up-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1) both",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
+        heading: ["Poppins", "sans-serif"],
       },
     },
   },
