@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <footer className="py-10 md:py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-card/80">
       <div className="container mx-auto max-w-6xl">
-        <ScrollReveal delay={0}>
+        <ScrollReveal delay={0} intensity="strong">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 items-start">
             {/* Brand */}
             <div>
@@ -51,9 +51,9 @@ const Footer = () => {
                         e.preventDefault();
                         scrollTo(link.href);
                       }}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 inline-flex items-center gap-1.5 group"
+                      className="text-sm text-muted-foreground hover:text-primary transition-all duration-300 inline-flex items-center gap-1.5 group"
                     >
-                      <span className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-150 transition-all duration-200" />
+                      <span className="w-1 h-1 rounded-full bg-primary/30 group-hover:bg-primary group-hover:scale-150 transition-all duration-300" />
                       {link.label}
                     </a>
                   </li>
@@ -71,7 +71,7 @@ const Footer = () => {
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="w-9 h-9 rounded-full border border-border hover:border-primary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground active:scale-95 transition-all duration-200"
+                    className="w-9 h-9 rounded-full border border-border hover:border-primary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground icon-hover active:scale-95 transition-all duration-300"
                     aria-label={link.label}
                   >
                     {link.icon}
@@ -83,11 +83,13 @@ const Footer = () => {
         </ScrollReveal>
 
         {/* Divider & Copyright */}
-        <div className="border-t border-border mt-8 pt-6 flex items-center justify-center">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
-          </p>
-        </div>
+        <ScrollReveal delay={0.1}>
+          <div className="border-t border-border mt-8 pt-6 flex items-center justify-center">
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Lomada Siva Gangi Reddy. All rights reserved.
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </footer>
   );
