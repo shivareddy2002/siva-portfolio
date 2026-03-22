@@ -111,7 +111,7 @@ const Publications = () => {
                       Professional Certifications
                     </CardTitle>
                     <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                      13 Certifications
+                      14 Certifications
                     </Badge>
                   </div>
                 </div>
