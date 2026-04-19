@@ -69,9 +69,20 @@ const About = () => {
                               {edu.icon}
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h4 className="font-semibold text-sm md:text-base text-foreground leading-snug">
-                                {edu.degree}
-                              </h4>
+                              {edu.degree === "High School" ? (
+                                <a
+                                  href="/SSC.pdf"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="font-semibold text-sm md:text-base text-foreground leading-snug hover:text-primary transition-colors underline-offset-4 hover:underline"
+                                >
+                                  {edu.degree}
+                                </a>
+                              ) : (
+                                <h4 className="font-semibold text-sm md:text-base text-foreground leading-snug">
+                                  {edu.degree}
+                                </h4>
+                              )}
                               <p className="text-xs md:text-sm text-muted-foreground mt-1">
                                 {edu.institution}
                               </p>
