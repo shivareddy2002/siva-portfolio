@@ -8,17 +8,20 @@ const Internships = () => {
   const internships = [
     {
       role: "Data Engineering Intern",
-      company: "Boolean Data Private Limited",
-      location: "Remote",
+      company: "Boolean Data Systems",
+      location: "Onsite",
       period: "Mar 2026 – Present",
       description: "Working on scalable data pipelines, ETL workflows, data migration, and performance optimization using Snowflake.",
-      project: "Data Engineering",
+      project: "Retail Sales Data Pipeline | Snowflake + SQL + Power BI",
       achievements: [
-        "Building scalable data pipelines for real-world data problems.",
-        "Developing ETL and data processing workflows across systems.",
-        "Performing data migration and optimizing performance using Snowflake features.",
+        "Built an enterprise-grade end-to-end Retail Sales Data Pipeline using Snowflake, SQL, CDC Streams, Tasks, and Power BI.",
+        "Implemented Bronze → Silver → Gold Medallion Architecture with incremental loading and MERGE-based upserts.",
+        "Designed Star Schema dimensional models with Change Data Capture (CDC) using Snowflake Streams and automated orchestration via Tasks.",
+        "Established a data quality framework with quarantine handling, monitoring, performance tuning, and Time Travel for recovery and auditing.",
+        "Integrated Power BI dashboards on top of the Gold layer for business reporting.",
       ],
-      tech: ["Snowflake", "SQL", "Python", "ETL", "Data Pipelines", "Data Migration", "Data Engineering"],
+      tech: ["Snowflake", "SQL", "Power BI", "ETL", "CDC", "Streams", "Tasks", "Star Schema", "Data Modeling", "Data Warehousing"],
+      github: "https://github.com/shivareddy2002/Retail-Sales-Data-Pipeline",
       website: "https://booleandata.ai/",
     },
     {
