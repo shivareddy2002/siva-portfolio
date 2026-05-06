@@ -7,6 +7,13 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Projects = () => {
   const projects = [
     {
+      title: "Retail Sales Data Pipeline",
+      description: "Enterprise-grade end-to-end retail data engineering pipeline on Snowflake with Bronze-Silver-Gold Medallion Architecture, CDC Streams, Tasks, MERGE-based incremental ETL, Star Schema modeling, and Power BI dashboards.",
+      tech: ["Snowflake", "SQL", "Power BI", "CDC", "Streams", "Tasks", "Star Schema", "ETL"],
+      github: "https://github.com/shivareddy2002/Retail-Sales-Data-Pipeline",
+      demo: "https://github.com/shivareddy2002/Retail-Sales-Data-Pipeline",
+    },
+    {
       title: "Water Stress Prediction",
       description: "Advanced prediction system using CNN+LSTM+ML algorithms on IoT sensor data to forecast water stress levels in tomato plants with high accuracy.",
       tech: ["Python", "TensorFlow", "CNN", "LSTM", "IoT", "ML"],
