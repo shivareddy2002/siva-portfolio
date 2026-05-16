@@ -41,16 +41,18 @@ const Index = () => {
     <div className="min-h-screen bg-background relative overflow-x-hidden">
       <ParticleBackground />
       <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <Hero />
-      <About />
-      <Internships />
-      <Projects />
-      <Skills />
-      <CoreCompetencies />
-      <Publications />
-      <Blog />
-      <GitHubStats />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Internships />
+        <Projects />
+        <Skills />
+        <CoreCompetencies />
+        <Publications />
+        <Blog />
+        <GitHubStats />
+        <Contact />
+      </main>
       <Footer />
       <ScrollToTop />
     </div>

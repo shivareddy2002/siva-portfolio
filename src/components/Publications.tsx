@@ -127,14 +127,14 @@ const Publications = () => {
                       <div className="flex-1 min-w-0">
                         {cert.link ? (
                           <a href={cert.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                            <h5 className="font-semibold text-sm md:text-base leading-tight mb-1 group-hover:text-primary transition-colors duration-300">
+                            <h4 className="font-semibold text-sm md:text-base leading-tight mb-1 group-hover:text-primary transition-colors duration-300">
                               {cert.title}
-                            </h5>
+                            </h4>
                           </a>
                         ) : (
-                          <h5 className="font-semibold text-sm md:text-base leading-tight mb-1">
+                          <h4 className="font-semibold text-sm md:text-base leading-tight mb-1">
                             {cert.title}
-                          </h5>
+                          </h4>
                         )}
                         <p className="text-xs md:text-sm text-muted-foreground">{cert.issuer}</p>
                       </div>

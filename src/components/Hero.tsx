@@ -66,7 +66,7 @@ const Hero = () => {
           >
             <div className="relative">
               <div className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full border-4 border-primary/20 shadow-2xl ring-4 ring-primary/10 overflow-hidden">
-                <img src={profileImage} alt="Lomada Siva Gangi Reddy" className="w-full h-full object-cover" style={{ objectPosition: '50% 15%' }} />
+                <img src={profileImage} alt="Lomada Siva Gangi Reddy" width={224} height={224} fetchPriority="high" decoding="async" className="w-full h-full object-cover" style={{ objectPosition: '50% 15%' }} />
               </div>
               {/* Pulse ring */}
               <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping" style={{ animationDuration: "3s" }} />
@@ -76,7 +76,7 @@ const Hero = () => {
           {/* Name */}
           <div style={stagger(0.1)}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-tight leading-tight">
-              Lomada Siva Gangi Reddy
+              Lomada Siva Gangi Reddy — Data Engineering & Data Science Portfolio
             </h1>
           </div>
 
