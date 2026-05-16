@@ -1,0 +1,11 @@
+# Lomada Siva Gangi Reddy — Portfolio
+
+> Personal portfolio of Lomada Siva Gangi Reddy (LSGR), Data Engineering Intern at Boolean Data Systems and aspiring Data Scientist working with Python, SQL, Snowflake, ML, DL, NLP, and Power BI.
+
+The site showcases projects, internships, certifications, research publications, technical skills, and contact details.
+
+## Pages
+- [Home](/): Hero, about, internships, projects, skills, certifications, blog, GitHub stats, and contact.
+
+## Optional
+- [Sitemap](/sitemap.xml): Machine-readable list of indexable routes.
