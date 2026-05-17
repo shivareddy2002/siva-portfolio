@@ -3,7 +3,7 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Footer = () => {
   const socialLinks = [
-    { href: "https://www.linkedin.com/in/lomada-siva-gangi-reddy-a64197280/", icon: <Linkedin className="h-4 w-4" />, label: "LinkedIn", external: true },
+    { href: "https://www.linkedin.com/in/sivareddy2002/", icon: <Linkedin className="h-4 w-4" />, label: "LinkedIn", external: true },
     { href: "https://github.com/shivareddy2002", icon: <Github className="h-4 w-4" />, label: "GitHub", external: true },
     { href: "mailto:lomadasivagangireddy3@gmail.com", icon: <Mail className="h-4 w-4" />, label: "Email", external: false },
     { href: "tel:+919346493592", icon: <Phone className="h-4 w-4" />, label: "Phone", external: false },
@@ -33,7 +33,7 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-heading font-bold gradient-text mb-2">LSGR</h3>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-                Data Engineering Intern @ Boolean Data Systems. Aspiring Data Scientist passionate about ML, DL & NLP.
+    "Aspiring Data Professional | Python | SQL | Snowflake | ML | DL | NLP | AI | Power BI ";
               </p>
             </div>
 

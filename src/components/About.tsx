@@ -48,11 +48,7 @@ const About = () => {
                     Professional Summary
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-[1.85] whitespace-pre-line">
-{`Aspiring Data Professional with hands-on experience in Data Engineering, ETL pipeline development, and cloud data warehousing using Snowflake, SQL, and Python. Completed a Data Engineering Internship at Boolean Data Systems, working on scalable data pipelines, data migration, query optimization, and analytical workflows.
-
-Skilled in Python, SQL, Snowflake, Machine Learning, Deep Learning, NLP, and Power BI, with experience in developing data-driven applications, analytical dashboards, and AI/ML solutions using TensorFlow, Streamlit, and Scikit-learn. Strong understanding of ETL processes, data modeling, data warehousing, and data transformation techniques.
-
-Passionate about building scalable data solutions, transforming raw data into actionable insights, and continuously learning modern data engineering and AI technologies to solve real-world business problems.`}
+{`Aspiring Data Professional with hands-on experience in Data Engineering, ETL pipeline development, and cloud data warehousing using Snowflake, SQL, and Python. Completed a Data Engineering Internship at Boolean Data Systems, working on scalable data pipelines, data migration, query optimization, and analytical workflows. Skilled in Python, SQL, Snowflake, Machine Learning, Deep Learning, NLP, and Power BI, with experience in developing data-driven applications, analytical dashboards, and AI/ML solutions using TensorFlow, Streamlit, and Scikit-learn. Strong understanding of ETL processes, data modeling, data warehousing, and data transformation techniques. Passionate about building scalable data solutions, transforming raw data into actionable insights, and continuously learning modern data engineering and AI technologies to solve real-world business problems.`}
                   </p>
                 </div>
               </ScrollReveal>

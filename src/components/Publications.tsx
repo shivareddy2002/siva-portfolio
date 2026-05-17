@@ -55,12 +55,12 @@ const Publications = () => {
       category: "Programming",
       link: "https://drive.google.com/file/d/1lujzTthCej8-_EbDkpPp-LH4P6QDhMIO/view?usp=sharing",
     },
-    {
-      title: "Data Science Guided Path",
-      issuer: "Coding Ninjas",
-      category: "Data Science",
-      link: "https://drive.google.com/file/d/1lujzTthCej8-_EbDkpPp-LH4P6QDhMIO/view?usp=sharing",
-    },
+    // {
+    //   title: "Data Science Guided Path",
+    //   issuer: "Coding Ninjas",
+    //   category: "Data Science",
+    //   link: "https://drive.google.com/file/d/1lujzTthCej8-_EbDkpPp-LH4P6QDhMIO/view?usp=sharing",
+    // },
     {
       title: "Big Data & Hadoop",
       issuer: "edX",

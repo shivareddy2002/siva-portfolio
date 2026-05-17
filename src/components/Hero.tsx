@@ -10,7 +10,7 @@ const Hero = () => {
   const [typingDone, setTypingDone] = useState(false);
 
   const fullText =
-    "Completed Data Engineering Intern @ Boolean Data Systems\nAspiring Data Professional | Data Scientist | Data Engineer\nPython | SQL | Snowflake | Machine Learning | Deep Learning | NLP | Power BI";
+    "Aspiring Data Professional | Data Scientist | Data Engineer\nPython | SQL | Snowflake | ML | DL | NLP | AI | Power BI ";
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 300);
@@ -124,7 +124,7 @@ const Hero = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-3" style={stagger(0.45)}>
             {[
-              { href: "https://www.linkedin.com/in/lomada-siva-gangi-reddy-a64197280/", icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn" },
+              { href: "https://www.linkedin.com/in/sivareddy2002/", icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn" },
               { href: "https://github.com/shivareddy2002", icon: <Github className="h-5 w-5" />, label: "GitHub" },
             ].map((link) => (
               <Button

@@ -1,53 +1,92 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code2, Database, BarChart3, Brain, MessageSquare } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
-
+import { Brain, BarChart3, Database, Code2, MessageSquare, Server } from "lucide-react";
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Data Engineering",
-      icon: <Database className="h-6 w-6" />,
-      skills: ["Snowflake", "ETL Pipelines", "Data Migration", "Data Warehousing", "Data Modeling", "CDC", "Pipeline Automation"],
-      color: "from-primary to-secondary",
-    },
-    {
-      title: "Programming Languages",
-      icon: <Code2 className="h-6 w-6" />,
-      skills: ["Python", "SQL", "Java", "C", "HTML", "CSS"],
-      color: "from-primary to-secondary",
-    },
-    {
-      title: "Data Science & ML",
-      icon: <Brain className="h-6 w-6" />,
-      skills: ["Machine Learning", "Deep Learning", "TensorFlow", "Scikit-learn", "NLP", "LLM"],
-      color: "from-primary to-accent",
-    },
-    {
-      title: "Data Analysis & Visualization",
-      icon: <BarChart3 className="h-6 w-6" />,
-      skills: ["Power BI", "Excel", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Streamlit"],
-      color: "from-secondary to-primary",
-    },
-    {
-      title: "Databases & Tools",
-      icon: <Database className="h-6 w-6" />,
-      skills: ["MySQL", "Snowflake", "Git", "GitHub", "Jupyter", "VS Code"],
-      color: "from-accent to-primary",
-    },
-    {
-      title: "Other Technical Skills",
-      icon: <Code2 className="h-6 w-6" />,
-      skills: ["Data Preprocessing", "Feature Engineering", "Model Evaluation", "Data Visualization Dashboards"],
-      color: "from-primary to-secondary",
-    },
-    {
-      title: "Soft Skills",
-      icon: <MessageSquare className="h-6 w-6" />,
-      skills: ["Teamwork", "Problem Solving", "Communication", "Quick Learning", "Time Management", "Analytical Thinking"],
-      color: "from-secondary to-accent",
-    },
-  ];
+const skillCategories = [
+  {
+    title: "Data Engineering",
+    icon: <Database className="h-6 w-6" />,
+    skills: [
+      "Snowflake",
+      "ETL Pipelines",
+      "Data Warehousing",
+      "Data Migration",
+      // "CDC",
+      // "Pipeline Automation",
+      "Data Modeling",
+    ],
+    color: "from-primary to-secondary",
+  },
+  {
+    title: "Programming Languages",
+    icon: <Code2 className="h-6 w-6" />,
+    skills: [
+      "Python",
+      "SQL",
+      "Java",
+      "C",
+      "HTML",
+      "CSS",
+    ],
+    color: "from-secondary to-accent",
+  },
+  {
+    title: "Data Science & ML",
+    icon: <Brain className="h-6 w-6" />,
+    skills: [
+      "ML",
+      "DL",
+      "AI",
+      "TensorFlow",
+      "Scikit-learn",
+      "NLP",
+      "LLM",
+    ],
+    color: "from-primary to-accent",
+  },
+  {
+    title: "Data Analysis & Visualization",
+    icon: <BarChart3 className="h-6 w-6" />,
+    skills: [
+      "Power BI",
+      "Excel",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Streamlit",
+    ],
+    color: "from-secondary to-primary",
+  },
+  {
+    title: "Databases & Tools",
+    icon: <Server className="h-6 w-6" />,
+    skills: [
+      "MySQL",
+      "Snowflake",
+      "Git",
+      "GitHub",
+      "Jupyter",
+      "VS Code",
+    ],
+    color: "from-accent to-primary",
+  },
+  {
+    title: "Professional & Technical Skills",
+    icon: <MessageSquare className="h-6 w-6" />,
+    skills: [
+      // "Feature Engineering",
+      // "Model Evaluation",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Teamwork",
+      "Communication",
+      "Quick Learning",
+      "Time Management",
+    ],
+    color: "from-primary to-secondary",
+  },
+];
 
   return (
     <section id="skills" className="py-10 md:py-14 px-4 sm:px-6 lg:px-8 bg-muted/30">

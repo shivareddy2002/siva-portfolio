@@ -3,14 +3,14 @@ import { ScrollReveal, useScrollReveal } from "@/hooks/useScrollReveal";
 
 const CoreCompetencies = () => {
   const competencies = [
-    { name: "Snowflake", level: 90 },
     { name: "Python", level: 90 },
+    { name: "SQL", level: 90 },
+    { name: "Data Analysis", level: 90 },
+    { name: "Snowflake", level: 85 },
     { name: "Data Engineering", level: 85 },
     { name: "ETL Pipelines", level: 85 },
-    { name: "Data Analysis", level: 90 },
     { name: "Machine Learning", level: 85 },
     { name: "Data Visualization", level: 85 },
-    { name: "SQL & Database Management", level: 85 },
     { name: "Deep Learning", level: 75 },
     { name: "Power BI & Excel", level: 75 },
     { name: "Natural Language Processing", level: 70 },

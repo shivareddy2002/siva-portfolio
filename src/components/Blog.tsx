@@ -21,20 +21,20 @@ const Blog = () => {
       badge: "Achievement",
       color: "from-primary to-accent",
     },
-    {
-      title: "Coding Challenge Milestone",
-      description: "Successfully solved 50+ coding challenges across LeetCode and GeeksforGeeks platforms, showcasing consistency in algorithmic problem-solving and data structures mastery.",
-      icon: <Code className="h-6 w-6" />,
-      badge: "Coding",
-      color: "from-secondary to-primary",
-    },
-    {
-      title: "Continuous Learning Journey",
-      description: "Actively expanding expertise in advanced machine learning techniques, deep learning frameworks, and modern data engineering practices through hands-on projects and certifications.",
-      icon: <TrendingUp className="h-6 w-6" />,
-      badge: "Growth",
-      color: "from-primary to-secondary",
-    },
+    // {
+    //   title: "Coding Challenge Milestone",
+    //   description: "Successfully solved 50+ coding challenges across LeetCode and GeeksforGeeks platforms, showcasing consistency in algorithmic problem-solving and data structures mastery.",
+    //   icon: <Code className="h-6 w-6" />,
+    //   badge: "Coding",
+    //   color: "from-secondary to-primary",
+    // },
+{
+  title: "Data Engineering & AI Growth",
+  description: "Continuously enhancing expertise in Data Engineering, Snowflake, ETL pipelines, ML, DL, NLP, and modern AI technologies through hands-on projects, internship experience, and industry certifications.",
+  icon: <TrendingUp className="h-6 w-6" />,
+  badge: "Continuous Growth",
+  color: "from-primary to-secondary",
+},
   ];
 
   return (

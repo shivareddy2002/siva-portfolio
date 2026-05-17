@@ -49,7 +49,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: <Mail className="h-5 w-5" />, label: "Email", value: "lomadasivagangireddy3@gmail.com", href: "mailto:lomadasivagangireddy3@gmail.com" },
     { icon: <Phone className="h-5 w-5" />, label: "Phone", value: "+91 9346493592", href: "tel:+919346493592" },
-    { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/lomada-siva-gangi-reddy-a64197280/" },
+    { icon: <Linkedin className="h-5 w-5" />, label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/sivareddy2002/" },
     { icon: <Github className="h-5 w-5" />, label: "GitHub", value: "View GitHub Profile", href: "https://github.com/shivareddy2002" },
     { icon: <MessageCircle className="h-5 w-5" />, label: "WhatsApp", value: "+91 9346493592", href: "https://wa.me/919346493592" },
   ];
