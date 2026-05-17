@@ -135,6 +135,14 @@ const Internships = () => {
                         </a>
                       </Button>
                     )}
+                    {internship.certification && (
+                      <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                        <a href={internship.certification} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          SnowPro Core Certification
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
