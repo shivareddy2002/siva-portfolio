@@ -1,10 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trophy, Code, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Award, Trophy, Code, TrendingUp, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Blog = () => {
   const updates = [
+    {
+      title: "SnowPro Core (COF-C03) Certification!",
+      description: "Earned the SnowPro Core (COF-C03) Certification from Snowflake, validating expertise in Snowflake cloud data platform architecture, data warehousing, performance, and security.",
+      icon: <Award className="h-6 w-6" />,
+      badge: "Certification",
+      color: "from-primary to-secondary",
+      link: "https://achieve.snowflake.com/f20a4644-32de-45ca-8b82-742fee65df77",
+    },
     {
       title: "Naukri Campus Young Turks Achievement",
       description: "Secured impressive 93.91 percentile in the competitive Naukri Campus Young Turks assessment, demonstrating strong analytical and problem-solving capabilities.",
@@ -57,10 +66,18 @@ const Blog = () => {
                     {update.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {update.description}
                   </p>
+                  {(update as any).link && (
+                    <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                      <a href={(update as any).link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Certification
+                      </a>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             </ScrollReveal>

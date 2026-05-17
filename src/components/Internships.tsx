@@ -10,16 +10,19 @@ const Internships = () => {
       role: "Data Engineering Intern",
       company: "Boolean Data Private Limited",
       location: "Remote",
-      period: "Mar 2026 – Present",
-      description: "Working on scalable data pipelines, ETL workflows, data migration, and performance optimization using Snowflake.",
+      period: "Mar 2026 – May 2026",
+      description: "Worked on enterprise-level data engineering workflows involving scalable ETL pipelines, data migration, Snowflake-based data warehousing, and performance optimization for analytical systems.",
       project: "Data Engineering",
       achievements: [
-        "Building scalable data pipelines for real-world data problems.",
-        "Developing ETL and data processing workflows across systems.",
-        "Performing data migration and optimizing performance using Snowflake features.",
+        "Built scalable ETL and data processing pipelines for real-world business datasets.",
+        "Worked on data migration and transformation workflows across multiple systems.",
+        "Implemented query optimization and performance tuning using Snowflake features.",
+        "Gained hands-on experience in data warehousing, pipeline automation, and analytical processing.",
+        "Completed SnowPro Core (COF-C03) Certification during the internship, strengthening expertise in Snowflake cloud data platform concepts and architecture.",
       ],
-      tech: ["Snowflake", "SQL", "Python", "ETL", "Data Pipelines", "Data Migration", "Data Engineering"],
+      tech: ["Snowflake", "SQL", "Python", "ETL Pipelines", "Data Migration", "Data Warehousing", "Data Engineering"],
       website: "https://booleandata.ai/",
+      certification: "https://achieve.snowflake.com/f20a4644-32de-45ca-8b82-742fee65df77",
     },
     {
       role: "Data Science Intern",
@@ -129,6 +132,14 @@ const Internships = () => {
                         <a href={internship.website} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2" />
                           Company Website
+                        </a>
+                      </Button>
+                    )}
+                    {internship.certification && (
+                      <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                        <a href={internship.certification} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          SnowPro Core Certification
                         </a>
                       </Button>
                     )}
