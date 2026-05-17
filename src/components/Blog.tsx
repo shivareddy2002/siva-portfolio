@@ -66,10 +66,18 @@ const Blog = () => {
                     {update.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {update.description}
                   </p>
+                  {(update as any).link && (
+                    <Button variant="outline" size="sm" className="hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
+                      <a href={(update as any).link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        View Certification
+                      </a>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             </ScrollReveal>
