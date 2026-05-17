@@ -10,7 +10,7 @@ const Hero = () => {
   const [typingDone, setTypingDone] = useState(false);
 
   const fullText =
-    "Data Engineering Intern @ Boolean Data Systems\nAspiring Data Scientist / Data Engineer | Python, SQL, ML, DL, NLP, Power BI";
+    "Completed Data Engineering Intern @ Boolean Data Systems\nAspiring Data Professional | Data Scientist | Data Engineer\nPython | SQL | Snowflake | Machine Learning | Deep Learning | NLP | Power BI";
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 300);
@@ -76,7 +76,7 @@ const Hero = () => {
           {/* Name */}
           <div style={stagger(0.1)}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground tracking-tight leading-tight">
-              Lomada Siva Gangi Reddy — Data Engineering & Data Science Portfolio
+              Lomada Siva Gangi Reddy
             </h1>
           </div>
 
@@ -100,7 +100,7 @@ const Hero = () => {
               asChild
             >
               <a
-                href="https://drive.google.com/file/d/1pAFCovAml0tfgLPa-qMXpn1sulbQAvJH/view?usp=sharing"
+                href="https://drive.google.com/file/d/1u-fTOmqqR9W4r79KJZuG-w1sAANUmnYE/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
