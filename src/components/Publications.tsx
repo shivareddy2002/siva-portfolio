@@ -7,6 +7,12 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Publications = () => {
   const certifications = [
     {
+      title: "SnowPro Core (COF-C03) Certification",
+      issuer: "Snowflake",
+      category: "Data Engineering",
+      link: "https://achieve.snowflake.com/f20a4644-32de-45ca-8b82-742fee65df77",
+    },
+    {
       title: "Data Warehouse",
       issuer: "Snowflake",
       category: "Data Engineering",
@@ -111,7 +117,7 @@ const Publications = () => {
                       Professional Certifications
                     </CardTitle>
                     <Badge className="bg-secondary/10 text-secondary hover:bg-secondary/20">
-                      14 Certifications
+                      15 Certifications
                     </Badge>
                   </div>
                 </div>

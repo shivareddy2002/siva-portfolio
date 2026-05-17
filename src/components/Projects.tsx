@@ -7,6 +7,20 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Projects = () => {
   const projects = [
     {
+      title: "Retail Sales Data Pipeline on Snowflake",
+      description: "Enterprise end-to-end retail data platform on Snowflake using Bronze–Silver–Gold Medallion Architecture with CDC Streams, Tasks, Star Schema modeling, SCD Type 2, and Power BI dashboards.",
+      tech: ["Snowflake", "SQL", "ETL", "CDC", "Power BI", "Star Schema", "Data Warehousing", "SCD Type 2"],
+      github: "https://github.com/shivareddy2002/Retail-Sales-Data-Pipeline",
+      demo: "https://drive.google.com/drive/folders/1zuIjjQU1D-O9mx495Zaa3snokYU9qc0K?usp=sharing",
+    },
+    {
+      title: "GRU-Based Text Generation using Deep Learning",
+      description: "End-to-end NLP text generation system using a GRU RNN with tokenization, sequence modeling, beam search, and temperature tuning, deployed as an interactive Streamlit web app.",
+      tech: ["Python", "TensorFlow", "Keras", "GRU", "RNN", "NLP", "Streamlit", "Beam Search"],
+      github: "https://github.com/shivareddy2002/GRU-Text-Generation",
+      demo: "https://text-generation-using-gru-model.streamlit.app/",
+    },
+    {
       title: "Water Stress Prediction",
       description: "Advanced prediction system using CNN+LSTM+ML algorithms on IoT sensor data to forecast water stress levels in tomato plants with high accuracy.",
       tech: ["Python", "TensorFlow", "CNN", "LSTM", "IoT", "ML"],

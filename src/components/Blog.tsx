@@ -1,10 +1,19 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trophy, Code, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Award, Trophy, Code, TrendingUp, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
 
 const Blog = () => {
   const updates = [
+    {
+      title: "SnowPro Core (COF-C03) Certification!",
+      description: "Earned the SnowPro Core (COF-C03) Certification from Snowflake, validating expertise in Snowflake cloud data platform architecture, data warehousing, performance, and security.",
+      icon: <Award className="h-6 w-6" />,
+      badge: "Certification",
+      color: "from-primary to-secondary",
+      link: "https://achieve.snowflake.com/f20a4644-32de-45ca-8b82-742fee65df77",
+    },
     {
       title: "Naukri Campus Young Turks Achievement",
       description: "Secured impressive 93.91 percentile in the competitive Naukri Campus Young Turks assessment, demonstrating strong analytical and problem-solving capabilities.",

@@ -6,6 +6,12 @@ import { ScrollReveal } from "@/hooks/useScrollReveal";
 const Skills = () => {
   const skillCategories = [
     {
+      title: "Data Engineering",
+      icon: <Database className="h-6 w-6" />,
+      skills: ["Snowflake", "ETL Pipelines", "Data Migration", "Data Warehousing", "Data Modeling", "CDC", "Pipeline Automation"],
+      color: "from-primary to-secondary",
+    },
+    {
       title: "Programming Languages",
       icon: <Code2 className="h-6 w-6" />,
       skills: ["Python", "SQL", "Java", "C", "HTML", "CSS"],
@@ -20,13 +26,13 @@ const Skills = () => {
     {
       title: "Data Analysis & Visualization",
       icon: <BarChart3 className="h-6 w-6" />,
-      skills: ["Power BI", "Excel", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+      skills: ["Power BI", "Excel", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Streamlit"],
       color: "from-secondary to-primary",
     },
     {
       title: "Databases & Tools",
       icon: <Database className="h-6 w-6" />,
-      skills: ["MySQL", "Git", "GitHub", "Jupyter", "VS Code"],
+      skills: ["MySQL", "Snowflake", "Git", "GitHub", "Jupyter", "VS Code"],
       color: "from-accent to-primary",
     },
     {
