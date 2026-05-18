@@ -28,12 +28,12 @@ const Footer = () => {
     <footer className="py-10 md:py-12 px-4 sm:px-6 lg:px-8 border-t border-border bg-card/80">
       <div className="container mx-auto max-w-6xl">
         <ScrollReveal delay={0}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-start">
             {/* Brand */}
             <div>
               <h3 className="text-xl font-heading font-bold gradient-text mb-2">LSGR</h3>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-    "Aspiring Data Professional | Python | SQL | Snowflake | ETL | Data Pipelines | ML | DL | NLP | AI | Power BI ";
+    "Aspiring Data Professional | Python | SQL | Snowflake | ETL | Data Pipelines | Machine Learning | Deep Learning | NLP | AI | Power BI";
               </p>
             </div>
 
