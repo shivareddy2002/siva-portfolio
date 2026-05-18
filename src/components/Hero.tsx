@@ -10,7 +10,7 @@ const Hero = () => {
   const [typingDone, setTypingDone] = useState(false);
 
   const fullText =
-    "Aspiring Data Professional | Data Scientist | Data Engineer\nPython | SQL | Snowflake | ML | DL | NLP | AI | Power BI ";
+    "Aspiring Data Professional | Data Scientist | Data Engineer\nPython | SQL | Snowflake | ETL | Data Pipelines | ML | DL | NLP | AI | Power BI ";
 
   useEffect(() => {
     const timer = setTimeout(() => setShowContent(true), 300);
