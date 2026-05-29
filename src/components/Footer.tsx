@@ -33,9 +33,10 @@ const Footer = () => {
             <div>
               <h3 className="text-xl font-heading font-bold gradient-text mb-2">LSGR</h3>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-    "Aspiring Data Professional | Python | SQL | Snowflake | ETL | Data Pipelines | Machine Learning | Deep Learning | NLP | AI | Power BI";
+                Aspiring Data Professional — Python, SQL, Snowflake, ETL, Data Pipelines, ML, DL, NLP, AI &amp; Power BI.
               </p>
             </div>
+
 
             {/* Quick Links */}
             <div>

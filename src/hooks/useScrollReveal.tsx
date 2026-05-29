@@ -7,6 +7,7 @@ interface ScrollRevealOptions {
 }
 
 export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
+
   const { threshold = 0.15, rootMargin = "0px 0px -60px 0px", triggerOnce = true } = options;
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -14,6 +15,15 @@ export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    // Respect prefers-reduced-motion — reveal instantly
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      setIsVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -31,6 +41,7 @@ export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
 
   return { ref, isVisible };
 };
+
 
 interface ScrollRevealProps {
   children: React.ReactNode;

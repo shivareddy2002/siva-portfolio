@@ -81,8 +81,8 @@ const Hero = () => {
           </div>
 
           {/* Typing animation */}
-          <div style={stagger(0.15)} className="w-full max-w-2xl">
-            <div className="min-h-[56px] flex items-center justify-center">
+          <div style={stagger(0.15)} className="w-full max-w-3xl">
+            <div className="min-h-[96px] sm:min-h-[80px] flex items-center justify-center">
               <p className="text-sm sm:text-base md:text-lg font-medium text-muted-foreground whitespace-pre-line leading-relaxed text-center">
                 {typedText}
                 <span
@@ -108,6 +108,7 @@ const Hero = () => {
                 Download Resume
               </a>
             </Button>
+
             <Button
               variant="outline"
               size="lg"

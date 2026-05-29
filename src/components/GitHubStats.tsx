@@ -47,14 +47,15 @@ const GitHubStats = () => {
                   <h3 className="text-sm font-heading font-semibold mb-3 text-center group-hover:text-primary transition-colors duration-300">
                     {stat.title}
                   </h3>
-                  <div className="relative rounded-lg overflow-hidden bg-[hsl(222,30%,8%)] flex-1 flex items-center justify-center p-2 min-h-[160px]">
+                  <div className="relative rounded-lg overflow-hidden bg-[#0D1117] flex-1 flex items-center justify-center p-2 min-h-[180px]">
                     <img
                       src={stat.url}
                       alt={stat.alt}
-                      className="w-full h-auto max-h-[200px] object-contain"
+                      className="w-full h-auto max-h-[200px] object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                       loading="lazy"
                     />
                   </div>
+
                 </CardContent>
               </Card>
             </ScrollReveal>
