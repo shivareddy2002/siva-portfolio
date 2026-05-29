@@ -5,7 +5,7 @@
 Welcome to my personal portfolio!  
 This website highlights my journey as an **Aspiring Data Scientist**, showcasing my **skills, projects, and certifications** in the fields of **Python, SQL, Machine Learning, Deep Learning, NLP, Power BI, and Data Visualization**.
 
-🌐 **Live Website:** (https://lsgr-portfolio-pulse.vercel.app/)  
+🌐 **Live Website:** (https://sivareddy2002.vercel.app/)  
 
 ---
 
