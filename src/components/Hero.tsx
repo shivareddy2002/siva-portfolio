@@ -85,6 +85,11 @@ const Hero = () => {
             <div className="min-h-[56px] flex items-center justify-center">
               <p className="text-sm sm:text-base md:text-lg font-medium text-muted-foreground whitespace-pre-line leading-relaxed text-center">
                 {typedText}
+          {/* Typing animation */}
+          <div style={stagger(0.15)} className="w-full max-w-3xl">
+            <div className="min-h-[92px] sm:min-h-[80px] flex items-center justify-center">
+              <p className="text-sm sm:text-base md:text-lg font-medium text-muted-foreground whitespace-pre-line leading-relaxed text-center">
+                {typedText}
                 <span
                   className={`inline-block w-[2px] h-5 sm:h-6 bg-primary ml-1 align-middle ${typingDone ? "animate-blink" : "opacity-100"}`}
                 />
@@ -92,10 +97,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center gap-4" style={stagger(0.3)}>
-            <Button
-              size="lg"
               className="text-sm md:text-base px-7 py-5 font-semibold bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl btn-glow"
               asChild
             >

@@ -80,11 +80,12 @@ const Internships = () => {
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-sm md:text-base mt-4 ml-0 md:ml-[60px]">
+                  <CardDescription className="text-sm md:text-base mt-4 sm:ml-[60px]">
                     {internship.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-5 ml-0 md:ml-[60px]">
+                <CardContent className="space-y-5 sm:ml-[60px]">
+
                   <div>
                     <h4 className="font-semibold text-foreground mb-3 text-sm">Key Achievements:</h4>
                     <ul className="space-y-2 text-muted-foreground">
