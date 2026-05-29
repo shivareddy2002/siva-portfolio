@@ -42,10 +42,6 @@ export const useScrollReveal = (options: ScrollRevealOptions = {}) => {
   return { ref, isVisible };
 };
 
-  }, [threshold, rootMargin, triggerOnce]);
-
-  return { ref, isVisible };
-};
 
 interface ScrollRevealProps {
   children: React.ReactNode;
