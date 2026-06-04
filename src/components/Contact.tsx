@@ -30,17 +30,33 @@ const Contact = () => {
     }
     setIsSubmitting(true);
     try {
-      await emailjs.send(
+      const templateParams = {
+        name: formData.name,
+        from_name: formData.name,
+        email: formData.email,
+        from_email: formData.email,
+        reply_to: formData.email,
+        user_email: formData.email,
+        message: formData.message,
+        to_email: "lomadasivagangireddy3@gmail.com",
+        to_name: "Lomada Siva Gangi Reddy",
+        title: `New portfolio message from ${formData.name}`,
+        subject: `New portfolio message from ${formData.name}`,
+        time: new Date().toLocaleString(),
+      };
+      const result = await emailjs.send(
         "service_Siva",
         "template_1125r79",
-        { name: formData.name, email: formData.email, message: formData.message },
-        "FfWlOU4le8NMIXMqN"
+        templateParams,
+        { publicKey: "FfWlOU4le8NMIXMqN" }
       );
+      console.log("EmailJS success:", result.status, result.text);
       toast({ title: "Message Sent!", description: "Thank you for reaching out. I'll get back to you soon!" });
       setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      toast({ title: "Failed to Send", description: "Something went wrong. Please try again later.", variant: "destructive" });
+    } catch (error: any) {
+      console.error("EmailJS error:", error?.status, error?.text, error);
+      const detail = error?.text || error?.message || "Please try again later.";
+      toast({ title: "Failed to Send", description: detail, variant: "destructive" });
     } finally {
       setIsSubmitting(false);
     }
