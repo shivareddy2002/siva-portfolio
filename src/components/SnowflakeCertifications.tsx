@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Award, Snowflake } from "lucide-react";
 import { ScrollReveal } from "@/hooks/useScrollReveal";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 
 const credentials = [
   {
