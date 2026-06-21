@@ -17,7 +17,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
       setIsScrolled(window.scrollY > 20);
 
       // Active section detection
-      const sections = ["home", "about", "internships", "projects", "skills", "publications", "blog", "github", "contact"];
+      const sections = ["home", "about", "internships", "projects", "skills", "publications", "snowflake", "blog", "github", "contact"];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el && el.getBoundingClientRect().top <= 100) {
@@ -36,6 +36,7 @@ const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
     { href: "#publications", label: "Certifications" },
+    { href: "#snowflake", label: "Snowflake" },
     { href: "#contact", label: "Contact" },
   ];
 
