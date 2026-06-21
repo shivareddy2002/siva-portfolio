@@ -7,6 +7,7 @@ import Internships from "@/components/Internships";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Publications from "@/components/Publications";
+import SnowflakeCertifications from "@/components/SnowflakeCertifications";
 import CoreCompetencies from "@/components/CoreCompetencies";
 import Blog from "@/components/Blog";
 import GitHubStats from "@/components/GitHubStats";
@@ -49,6 +50,7 @@ const Index = () => {
         <Skills />
         <CoreCompetencies />
         <Publications />
+        <SnowflakeCertifications />
         <Blog />
         <GitHubStats />
         <Contact />
